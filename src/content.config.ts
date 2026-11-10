@@ -40,6 +40,50 @@ const games = defineCollection({
         .default([]),
 
       tips: z.array(z.string()).default([]),
+
+      /** Call to action shown under the progress block. */
+      cta: z
+        .object({
+          heading: z.string(),
+          body: z.string(),
+          button: z.string(),
+          href: z.string().url(),
+        })
+        .optional(),
+
+      /** Snapshot of completion progress. Omit for games you aren't tracking. */
+      progress: z
+        .object({
+          /** When these numbers were last read off the tracker */
+          updated: z.coerce.date(),
+          source: z.string().url().optional(),
+          /** Headline percentage, 0-100 */
+          overall: z.number().min(0).max(100),
+          trackers: z
+            .array(
+              z.object({
+                label: z.string(),
+                done: z.number(),
+                total: z.number(),
+              })
+            )
+            .default([]),
+          /** Optional second breakdown, e.g. by region */
+          breakdownLabel: z.string().optional(),
+          breakdown: z
+            .array(
+              z.object({
+                name: z.string(),
+                done: z.number(),
+                total: z.number(),
+              })
+            )
+            .default([]),
+          notes: z
+            .array(z.object({ label: z.string(), value: z.string() }))
+            .default([]),
+        })
+        .optional(),
     }),
 });
 

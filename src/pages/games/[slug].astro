@@ -2,6 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ToolCard from '../../components/ToolCard.astro';
+import Progress from '../../components/Progress.astro';
+import Cta from '../../components/Cta.astro';
 
 export async function getStaticPaths() {
   const games = await getCollection('games', ({ data }) => !data.draft);
@@ -39,6 +41,10 @@ const statusLabel = {
 
       <p class="summary">{d.summary}</p>
     </header>
+
+    {d.progress && <Progress progress={d.progress} />}
+
+    {d.cta && <Cta cta={d.cta} />}
 
     {
       d.tools.length > 0 && (

@@ -1,0 +1,278 @@
+---
+interface Row {
+  label: string;
+  done: number;
+  total: number;
+}
+
+interface Props {
+  progress: {
+    updated: Date;
+    source?: string;
+    overall: number;
+    trackers: Row[];
+    breakdownLabel?: string;
+    breakdown: { name: string; done: number; total: number }[];
+    notes: { label: string; value: string }[];
+  };
+}
+
+const { progress: p } = Astro.props;
+const pct = (done: number, total: number) => (total ? (done / total) * 100 : 0);
+const fmt = (n: number) => (n < 10 ? n.toFixed(1) : Math.round(n).toString());
+
+// timeZone: 'UTC' matters — a bare `2026-11-10` in YAML is UTC midnight, and
+// formatting it in the build machine's local zone slides it to the 9th.
+const updated = p.updated.toLocaleDateString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+---
+
+<section class="progress">
+  <h2 class="section-title">Progress</h2>
+
+  <div class="top">
+    <div class="hero">
+      <span class="figure">{fmt(p.overall)}<span class="unit">%</span></span>
+      <span class="caption">overall completion</span>
+    </div>
+
+    {
+      p.notes.length > 0 && (
+        <dl class="notes">
+          {p.notes.map((n) => (
+            <div>
+              <dt>{n.label}</dt>
+              <dd>{n.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )
+    }
+  </div>
+
+  {
+    p.trackers.length > 0 && (
+      <table class="bars">
+        <caption class="sr-only">Completion by tracker</caption>
+        <tbody>
+          {p.trackers.map((t) => (
+            <tr>
+              <th scope="row">{t.label}</th>
+              <td class="track-cell">
+                <span class="track">
+                  <span class="fill" style={`width: ${Math.max(pct(t.done, t.total), 0.6)}%`} />
+                </span>
+              </td>
+              <td class="count">
+                {t.done}<span class="of">/{t.total}</span>
+              </td>
+              <td class="pct">{fmt(pct(t.done, t.total))}%</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    )
+  }
+
+  {
+    p.breakdown.length > 0 && (
+      <details class="breakdown">
+        <summary>{p.breakdownLabel ?? 'Full breakdown'}</summary>
+        <table class="bars">
+          <tbody>
+            {p.breakdown.map((b) => (
+              <tr>
+                <th scope="row">{b.name}</th>
+                <td class="track-cell">
+                  <span class="track">
+                    <span
+                      class="fill"
+                      style={`width: ${Math.max(pct(b.done, b.total), 0.6)}%`}
+                    />
+                  </span>
+                </td>
+                <td class="count">
+                  {b.done}<span class="of">/{b.total}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </details>
+    )
+  }
+
+  <p class="stamp">
+    Read from the tracker on {updated}
+    {p.source && (
+      <>
+        {' · '}
+        <a href={p.source} target="_blank" rel="noopener noreferrer">
+          open the sheet
+        </a>
+      </>
+    )}
+  </p>
+</section>
+
+<style>
+  .progress {
+    margin-bottom: 32px;
+  }
+
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 28px 40px;
+    padding: 18px 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 14px;
+  }
+
+  /* Hero number: the headline is a figure, not a chart. */
+  .figure {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .unit {
+    font-size: 22px;
+    margin-left: 2px;
+  }
+  .caption {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    font-family: var(--mono);
+    color: var(--dim);
+  }
+
+  .notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 32px;
+    margin: 0;
+  }
+  .notes dt {
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--dim);
+    margin-bottom: 4px;
+  }
+  .notes dd {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .bars {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+  }
+
+  .bars th {
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--text);
+    white-space: nowrap;
+    padding-right: 14px;
+    width: 1%;
+  }
+
+  .track-cell {
+    width: 100%;
+  }
+
+  .track {
+    display: block;
+    height: 8px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  /* Rounded data-end, anchored to the baseline at the left. */
+  .fill {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* Values wear text tokens, never the series color. */
+  .count,
+  .pct {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text);
+    text-align: right;
+    white-space: nowrap;
+    padding-left: 14px;
+    font-variant-numeric: tabular-nums;
+  }
+  .of {
+    color: var(--dim);
+  }
+  .pct {
+    color: var(--dim);
+    width: 1%;
+  }
+
+  .breakdown {
+    margin-top: 14px;
+  }
+  .breakdown summary {
+    cursor: pointer;
+    font-size: 11px;
+    font-family: var(--mono);
+    color: var(--dim);
+    padding: 6px 0;
+  }
+  .breakdown summary:hover {
+    color: var(--accent);
+  }
+
+  .stamp {
+    margin: 12px 0 0;
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--dim);
+    opacity: 0.7;
+  }
+  .stamp a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 520px) {
+    .figure {
+      font-size: 36px;
+    }
+    .pct {
+      display: none;
+    }
+  }
+</style>

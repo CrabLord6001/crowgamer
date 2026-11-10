@@ -4,14 +4,40 @@ tagline: Clearing every dungeon in Special Edition
 genre: Open-World RPG
 summary: A systematic 100% run through Skyrim Special Edition — every location cleared, every quest closed, every word wall read. Base game plus Dawnguard, Hearthfire and Dragonborn; no Creation Club.
 status: in-progress
-accent: "#79a7c9"
+accent: "#5ba3dd"
 order: 2
+progress:
+  updated: 2026-11-10
+  overall: 9.6
+  trackers:
+    - { label: Locations cleared, done: 34, total: 241 }
+    - { label: Achievements unlocked, done: 14, total: 75 }
+    - { label: Quests completed, done: 11, total: 431 }
+    - { label: Collectibles found, done: 11, total: 166 }
+    - { label: Shout words learned, done: 5, total: 81 }
+  breakdownLabel: Locations cleared by hold
+  breakdown:
+    - { name: Falkreath Hold, done: 11, total: 30 }
+    - { name: The Rift, done: 6, total: 40 }
+    - { name: Eastmarch, done: 6, total: 29 }
+    - { name: Whiterun Hold, done: 5, total: 29 }
+    - { name: Winterhold, done: 4, total: 17 }
+    - { name: The Pale, done: 3, total: 21 }
+    - { name: Haafingar, done: 0, total: 27 }
+    - { name: Hjaalmarch, done: 0, total: 16 }
+  notes:
+    - { label: Toward Delver (50), value: "33" }
+    - { label: Word walls cleared, value: "2 / 40" }
+    - { label: Locations remaining, value: "207" }
+cta:
+  heading: Track your own run
+  body: >-
+    The same tracker, blank. 298 locations, 431 quests, 75 achievements, 166
+    collectibles and 81 shout words, already filled in with holds, types, quest
+    links and word walls — every total adds itself up as you tick things off.
+  button: Download blank copy
+  href: https://docs.google.com/spreadsheets/d/1xci0z_6NOtNHVyEoAUnL2PNn9M3Wkl5WuJ_nwkMN-So/copy
 tools:
-  - name: Completion Tracker
-    desc: 298 locations, 431 quests, 75 achievements, 166 collectibles and 81 shout words, with weighted progress
-    icon: "🗡️"
-    href: https://docs.google.com/spreadsheets/d/1xci0z_6NOtNHVyEoAUnL2PNn9M3Wkl5WuJ_nwkMN-So/edit
-    ready: true
   - name: Dungeon Index
     desc: Every clearable location by hold, with type, enemies and word walls
     icon: "🏔️"
