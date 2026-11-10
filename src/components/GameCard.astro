@@ -13,6 +13,11 @@ const statusLabel = {
   'in-progress': 'In progress',
   planned: 'Planned',
 }[d.status];
+
+// A tall emblem capped at the same height as a square badge reads as much
+// smaller, so portrait logos get a taller box and are capped by width instead.
+const portrait = d.logo ? d.logo.height > d.logo.width * 1.15 : false;
+const logoHeight = portrait ? 104 : 72;
 ---
 
 <a href={`/games/${game.id}/`} class="card" style={`--game: ${d.accent}`}>
@@ -21,7 +26,13 @@ const statusLabel = {
   <span class="logo">
     {
       d.logo ? (
-        <Image src={d.logo} alt={d.title} height={72} densities={[1, 2]} />
+        <Image
+          src={d.logo}
+          alt={d.title}
+          height={logoHeight}
+          densities={[1, 2]}
+          class:list={{ portrait }}
+        />
       ) : (
         <span class="wordmark">{d.title}</span>
       )
@@ -76,16 +87,21 @@ const statusLabel = {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 72px;
+    height: 104px;
   }
 
   .logo :global(img) {
     max-height: 72px;
+    max-width: 150px;
     width: auto;
     object-fit: contain;
     filter: brightness(0.9);
     transition: filter 0.3s;
   }
+  .logo :global(img.portrait) {
+    max-height: 104px;
+  }
+
   .card:hover .logo :global(img) {
     filter: brightness(1.1);
   }

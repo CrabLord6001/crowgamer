@@ -5,6 +5,7 @@ genre: Open-World RPG
 summary: A systematic 100% run through Skyrim Special Edition — every location cleared, every quest closed, every word wall read. Base game plus Dawnguard, Hearthfire and Dragonborn; no Creation Club.
 status: in-progress
 accent: "#5ba3dd"
+logo: ../../assets/games/skyrim-logo.png
 order: 2
 progress:
   # Live numbers are read from this sheet at build time. Everything below is
