@@ -46,6 +46,11 @@ cta:
   button: Download blank copy
   href: https://docs.google.com/spreadsheets/d/1xci0z_6NOtNHVyEoAUnL2PNn9M3Wkl5WuJ_nwkMN-So/copy
 tools:
+  - name: Alchemy Lookup
+    desc: 109 ingredients and 55 effects — find every ingredient with an effect, or what two ingredients share
+    icon: "⚗️"
+    route: alchemy
+    ready: true
   - name: Dungeon Index
     desc: Every clearable location by hold, with type, enemies and word walls
     icon: "🏔️"

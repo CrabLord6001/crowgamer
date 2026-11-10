@@ -18,56 +18,8 @@ export interface SheetProgress {
   fetchedAt: Date;
 }
 
-export function csvUrl(spreadsheetId: string, tab = 'Progress') {
-  return `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tab)}`;
-}
+import { fetchSheetRows, clean } from './csv';
 
-/** Minimal RFC-4180 parser: handles quoted fields and escaped quotes. */
-function parseCsv(text: string): string[][] {
-  const rows: string[][] = [];
-  let row: string[] = [];
-  let field = '';
-  let quoted = false;
-
-  for (let i = 0; i < text.length; i++) {
-    const c = text[i];
-
-    if (quoted) {
-      if (c === '"') {
-        if (text[i + 1] === '"') {
-          field += '"';
-          i++;
-        } else {
-          quoted = false;
-        }
-      } else {
-        field += c;
-      }
-      continue;
-    }
-
-    if (c === '"') quoted = true;
-    else if (c === ',') {
-      row.push(field);
-      field = '';
-    } else if (c === '\n') {
-      row.push(field);
-      rows.push(row);
-      row = [];
-      field = '';
-    } else if (c !== '\r') {
-      field += c;
-    }
-  }
-
-  if (field || row.length) {
-    row.push(field);
-    rows.push(row);
-  }
-  return rows;
-}
-
-const clean = (s: string | undefined) => (s ?? '').trim();
 const num = (s: string | undefined) => {
   const n = parseFloat(clean(s).replace(/[%,]/g, ''));
   return Number.isFinite(n) ? n : 0;
@@ -90,18 +42,9 @@ export async function fetchProgress(
   spreadsheetId: string,
   tab = 'Progress'
 ): Promise<SheetProgress | null> {
-  let rows: string[][];
-
-  try {
-    const res = await fetch(csvUrl(spreadsheetId, tab), {
-      signal: AbortSignal.timeout(15_000),
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    rows = parseCsv(await res.text());
-  } catch (err) {
-    console.warn(
-      `[progress] could not read the tracker (${err instanceof Error ? err.message : err}); using the frontmatter snapshot`
-    );
+  const rows = await fetchSheetRows(spreadsheetId, tab, 'progress');
+  if (!rows) {
+    console.warn('[progress] using the frontmatter snapshot');
     return null;
   }
 
