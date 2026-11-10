@@ -13,17 +13,17 @@ tools:
     desc: Visual flowchart with foundation footprints
     icon: "⚙️"
     route: planner
-    ready: true
+    ready: false
   - name: Build Showcase
     desc: Short videos of factory builds and automation setups
     icon: "🎬"
     route: showcase
-    ready: true
+    ready: false
   - name: Save Tracker
     desc: Airtable to-do list for tracking progress
     icon: "💾"
     route: saves
-    ready: true
+    ready: false
 tips:
   - Always build on foundations
   - Manifold saves space and reduces spaghetti
