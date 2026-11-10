@@ -1,0 +1,59 @@
+---
+import { getEntry } from 'astro:content';
+import Base from './Base.astro';
+
+interface Props {
+  /** Slug of the game this tool belongs to */
+  game: string;
+  title: string;
+  heading: string;
+  description: string;
+  lede?: string;
+  /** Let the tool use the full width rather than the text column */
+  wide?: boolean;
+}
+
+const { game: slug, title, heading, description, lede, wide } = Astro.props;
+const game = await getEntry('games', slug);
+---
+
+<Base title={title} description={description} accent={game?.data.accent} current={slug}>
+  <div class:list={['wrap', { wide }]}>
+    <header class="hero">
+      <a href={`/games/${slug}/`} class="back">← {game?.data.title ?? 'Back'}</a>
+      <h1>{heading}</h1>
+      {lede && <p class="lede">{lede}</p>}
+    </header>
+
+    <slot />
+  </div>
+</Base>
+
+<style>
+  .wrap.wide {
+    max-width: 1180px;
+  }
+  .hero {
+    padding: 36px 0 20px;
+  }
+  .back {
+    color: var(--dim);
+    font-size: 11px;
+  }
+  .back:hover {
+    color: var(--accent);
+  }
+  h1 {
+    font-size: clamp(24px, 6vw, 32px);
+    font-weight: 700;
+    margin: 8px 0 8px;
+    color: var(--accent);
+  }
+  .lede {
+    font-size: 13px;
+    color: var(--dim);
+    line-height: 1.7;
+    max-width: 660px;
+    margin: 0;
+  }
+</style>

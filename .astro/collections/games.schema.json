@@ -93,6 +93,47 @@
           },
           "default": []
         },
+        "videos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "desc": {
+                "type": "string"
+              },
+              "youtubeId": {
+                "type": "string"
+              },
+              "date": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  {
+                    "type": "integer",
+                    "format": "unix-time"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "title",
+              "desc",
+              "youtubeId",
+              "date"
+            ],
+            "additionalProperties": false
+          },
+          "default": []
+        },
         "cta": {
           "type": "object",
           "properties": {

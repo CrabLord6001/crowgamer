@@ -1,0 +1,122 @@
+---
+import { getEntry } from 'astro:content';
+import ToolPage from '../../../layouts/ToolPage.astro';
+
+const game = await getEntry('games', 'satisfactory');
+const videos = [...(game?.data.videos ?? [])].sort(
+  (a, b) => b.date.getTime() - a.date.getTime()
+);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+---
+
+<ToolPage
+  game="satisfactory"
+  title="Satisfactory build showcase | CrowGamer"
+  heading="Build Showcase"
+  description="Short clips of Satisfactory factory builds and automation setups."
+  lede="Short clips of factory builds and automation setups."
+>
+  {
+    videos.length === 0 ? (
+      <p class="empty">No clips up yet.</p>
+    ) : (
+      <div class="clips">
+        {videos.map((v) => (
+          <article class="clip">
+            <div class="frame">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
+                title={v.title}
+                loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </div>
+            <div class="meta">
+              <div class="row">
+                <h2>{v.title}</h2>
+                <time datetime={v.date.toISOString().slice(0, 10)}>{fmt(v.date)}</time>
+              </div>
+              <p>{v.desc}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    )
+  }
+</ToolPage>
+
+<style>
+  .clips {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 48px;
+    max-width: 860px;
+  }
+
+  .clip {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .clip:hover {
+    border-color: var(--accent);
+  }
+
+  .frame {
+    position: relative;
+    padding-bottom: 56.25%;
+    background: #000;
+  }
+  .frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .meta {
+    padding: 16px 20px;
+  }
+  .row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0;
+  }
+  time {
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--dim);
+    white-space: nowrap;
+  }
+  p {
+    font-size: 12px;
+    color: var(--dim);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .empty {
+    color: var(--dim);
+    font-size: 13px;
+    padding-bottom: 48px;
+  }
+</style>

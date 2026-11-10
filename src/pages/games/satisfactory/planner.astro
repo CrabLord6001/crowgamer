@@ -1,0 +1,25 @@
+---
+import ToolPage from '../../../layouts/ToolPage.astro';
+import SatisfactoryPlanner from '../../../components/react/SatisfactoryPlanner.jsx';
+---
+
+<ToolPage
+  game="satisfactory"
+  title="Satisfactory production planner | CrowGamer"
+  heading="Production Planner"
+  description="Plan a Satisfactory production line: pick a target item and rate, pick alternate recipes, and get a machine-by-machine tree with foundation footprints."
+  lede="Pick a target item and a rate, and it builds the machine tree with foundation footprints. Alternate recipes are selectable per item. Drag to pan, scroll to zoom, drag nodes to rearrange."
+  wide
+>
+  <SatisfactoryPlanner client:only="react" />
+</ToolPage>
+
+<style is:global>
+  /* The planner styles itself inline; it only needs room and a canvas surface. */
+  .sfp {
+    margin-bottom: 48px;
+  }
+  .sfp-wrap {
+    max-width: 100%;
+  }
+</style>

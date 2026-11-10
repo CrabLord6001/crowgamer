@@ -13,21 +13,32 @@ tools:
     desc: Visual flowchart with foundation footprints
     icon: "⚙️"
     route: planner
-    ready: false
+    ready: true
   - name: Build Showcase
     desc: Short videos of factory builds and automation setups
     icon: "🎬"
     route: showcase
-    ready: false
+    ready: true
   - name: Save Tracker
     desc: Airtable to-do list for tracking progress
     icon: "💾"
     route: saves
-    ready: false
+    ready: true
 tips:
   - Always build on foundations
   - Manifold saves space and reduces spaghetti
   - Somersloop your bottleneck machines
+videos:
+  - title: Phase 2 Completion Tour
+    desc: >-
+      Tour of my factory build thus far after completing Phase 2 for the Space
+      Elevator. Includes versatile framework and automated wire setup.
+    youtubeId: iajK8_gb1h4
+    date: 2026-04-20
+  - title: Biomass Maker Interface (BMI)
+    desc: Easy and efficient way to fill Biomass Burner early game.
+    youtubeId: qCuDT8GmLrI
+    date: 2026-04-17
 ---
 
 Notes and guides for Satisfactory go here. Anything written below the frontmatter

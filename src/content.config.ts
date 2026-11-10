@@ -41,6 +41,18 @@ const games = defineCollection({
 
       tips: z.array(z.string()).default([]),
 
+      /** Clips shown on the game's showcase page, newest first. */
+      videos: z
+        .array(
+          z.object({
+            title: z.string(),
+            desc: z.string(),
+            youtubeId: z.string(),
+            date: z.coerce.date(),
+          })
+        )
+        .default([]),
+
       /** Call to action shown under the progress block. */
       cta: z
         .object({
