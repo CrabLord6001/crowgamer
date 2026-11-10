@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import GameCard from '../components/GameCard.astro';
+
+const games = (await getCollection('games', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<Base
+  title="CrowGamer — game guides, completion notes and tools"
+  description="Personal tools and notes for the games I play, by Jonathan Crow."
+>
+  <div class="wrap">
+    <header class="hero">
+      <h1>CrowGamer</h1>
+      <p class="lede">Personal tools and notes for the games I play.</p>
+      <p class="by">by Jonathan Crow</p>
+    </header>
+
+    <div class="grid">
+      {games.map((game) => <GameCard game={game} />)}
+    </div>
+  </div>
+</Base>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 60px 0 40px;
+  }
+
+  h1 {
+    font-size: clamp(32px, 9vw, 42px);
+    font-weight: 700;
+    margin: 0 0 8px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2), var(--brand));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .lede {
+    color: var(--dim);
+    font-size: 14px;
+    margin: 0 auto 6px;
+    max-width: 500px;
+    line-height: 1.7;
+  }
+
+  .by {
+    color: var(--dim);
+    font-size: 11px;
+    font-family: var(--mono);
+    opacity: 0.5;
+    margin: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+    justify-content: center;
+    gap: 14px;
+    padding-bottom: 56px;
+  }
+</style>

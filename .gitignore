@@ -4,3 +4,7 @@ dist
 *.log
 .env
 .vscode
+
+# Vite writes these while resolving the config; they are not source
+vite.config.js.timestamp-*.mjs
+vite.config.ts.timestamp-*.mjs

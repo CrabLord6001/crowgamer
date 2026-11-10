@@ -1,0 +1,111 @@
+{
+  "$ref": "#/definitions/games",
+  "definitions": {
+    "games": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "tagline": {
+          "type": "string"
+        },
+        "genre": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "completed",
+            "in-progress",
+            "planned"
+          ],
+          "default": "planned"
+        },
+        "completion": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "hours": {
+          "type": "string"
+        },
+        "accent": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "errorMessage": {
+            "pattern": "accent must be a #rrggbb hex color"
+          }
+        },
+        "logo": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number",
+          "default": 100
+        },
+        "draft": {
+          "type": "boolean",
+          "default": false
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "desc": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "route": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string",
+                "format": "uri"
+              },
+              "ready": {
+                "type": "boolean",
+                "default": false
+              }
+            },
+            "required": [
+              "name",
+              "desc",
+              "icon"
+            ],
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "tips": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "tagline",
+        "genre",
+        "summary",
+        "accent"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

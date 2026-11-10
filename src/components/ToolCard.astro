@@ -1,0 +1,85 @@
+---
+interface Props {
+  tool: {
+    name: string;
+    desc: string;
+    icon: string;
+    route?: string;
+    href?: string;
+    ready: boolean;
+  };
+  slug: string;
+}
+const { tool, slug } = Astro.props;
+
+const to = tool.href ?? (tool.route ? `/games/${slug}/${tool.route}/` : undefined);
+const live = tool.ready && to;
+const external = Boolean(tool.href);
+const Tag = live ? 'a' : 'div';
+---
+
+<Tag
+  class:list={['tool', { live }]}
+  href={live ? to : undefined}
+  target={live && external ? '_blank' : undefined}
+  rel={live && external ? 'noopener noreferrer' : undefined}
+>
+  {!tool.ready && <span class="soon">COMING SOON</span>}
+  {live && external && <span class="soon">OPENS IN SHEETS</span>}
+  <div class="icon">{tool.icon}</div>
+  <h3>{tool.name}</h3>
+  <p>{tool.desc}</p>
+</Tag>
+
+<style>
+  .tool {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    transition: background 0.25s, border-color 0.25s;
+  }
+
+  .tool.live:hover {
+    background: var(--card-hover);
+    border-color: var(--accent);
+  }
+
+  .soon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 8px;
+    font-family: var(--mono);
+    color: var(--dim);
+    background: var(--bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+
+  .icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dim);
+  }
+  .tool.live h3 {
+    color: var(--accent);
+  }
+
+  p {
+    margin: 0;
+    font-size: 11px;
+    color: var(--dim);
+    line-height: 1.5;
+  }
+</style>

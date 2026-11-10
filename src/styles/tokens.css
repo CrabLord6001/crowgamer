@@ -1,0 +1,79 @@
+/* Design tokens. Ported from the `T` object in the old App.jsx.
+   --accent is overridden per game page from the game's frontmatter,
+   so site chrome stays CrowGamer's and each game wears its own color. */
+
+:root {
+  --bg: #08090d;
+  --card: #0e1117;
+  --card-hover: #141820;
+  --border: #1a1f2e;
+  --text: #c9d1d9;
+  --dim: #6b7280;
+
+  /* CrowGamer's own color. Never changes per game — change it here to rebrand.
+     Currently Satisfactory's orange, which is the thing worth revisiting. */
+  --brand: #f97316;
+  --brand-2: #fbbf24;
+
+  --accent: #f97316;
+  --accent-dim: rgba(249, 115, 22, 0.12);
+  --accent-glow: rgba(249, 115, 22, 0.15);
+
+  --font: 'Chakra Petch', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --maxw: 1000px;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section heading used on game pages: ◆ TOOLS & GUIDES */
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text);
+}
+
+.section-title::before {
+  content: '◆';
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

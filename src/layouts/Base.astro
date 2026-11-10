@@ -1,0 +1,81 @@
+---
+import '../styles/tokens.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Hex color for this page's --accent. Game pages pass their own. */
+  accent?: string;
+  current?: string;
+}
+
+const {
+  title,
+  description = 'Game guides, completion notes and tools by Jonathan Crow.',
+  accent,
+  current = '',
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+
+/** #rrggbb -> "r, g, b" so CSS can build rgba() at any opacity */
+function rgbChannels(hex: string) {
+  const h = hex.replace('#', '');
+  return [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16)).join(', ');
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- These were referenced by the old token object but never actually loaded. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+    />
+
+  </head>
+  <!-- Accent goes inline on <body>, not in a <style>: Astro's bundled stylesheet
+       is injected after any head style, so a :root rule there loses to tokens.css. -->
+  <body
+    style={accent
+      ? `--accent:${accent};--accent-rgb:${rgbChannels(accent)};--accent-dim:rgba(${rgbChannels(accent)},0.12);--accent-glow:rgba(${rgbChannels(accent)},0.15);`
+      : undefined}
+  >
+    <Nav current={current} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- Old site used #hash routing. Send bookmarked #satisfactory style links
+         to their real paths; the server never sees a fragment, so this is client-side. -->
+    <script is:inline>
+      (function () {
+        var h = window.location.hash.slice(1);
+        if (!h || window.location.pathname !== '/') return;
+        var parts = h.split('/').filter(Boolean);
+        if (!parts.length) return;
+        window.location.replace('/games/' + parts.join('/') + '/');
+      })();
+    </script>
+  </body>
+</html>

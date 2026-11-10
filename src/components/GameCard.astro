@@ -1,0 +1,115 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  game: CollectionEntry<'games'>;
+}
+const { game } = Astro.props;
+const d = game.data;
+
+const statusLabel = {
+  completed: '100%',
+  'in-progress': 'In progress',
+  planned: 'Planned',
+}[d.status];
+---
+
+<a href={`/games/${game.id}/`} class="card" style={`--game: ${d.accent}`}>
+  <span class="glow"></span>
+
+  <span class="logo">
+    {
+      d.logo ? (
+        <Image src={d.logo} alt={d.title} height={72} densities={[1, 2]} />
+      ) : (
+        <span class="wordmark">{d.title}</span>
+      )
+    }
+  </span>
+
+  <span class="meta">
+    <span class="status">{statusLabel}</span>
+    {d.hours && <span class="hours">{d.hours} hrs</span>}
+  </span>
+</a>
+
+<style>
+  .card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 220px;
+    padding: 24px 32px 18px;
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s, background 0.3s;
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    background: var(--card-hover);
+    border-color: var(--game);
+    transform: translateY(-4px);
+    box-shadow: 0 0 32px color-mix(in srgb, var(--game) 12%, transparent),
+      0 0 0 1px color-mix(in srgb, var(--game) 27%, transparent);
+  }
+
+  .glow {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--game), transparent);
+    opacity: 0.35;
+    transition: opacity 0.3s;
+  }
+  .card:hover .glow {
+    opacity: 1;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+  }
+
+  .logo :global(img) {
+    max-height: 72px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0.9);
+    transition: filter 0.3s;
+  }
+  .card:hover .logo :global(img) {
+    filter: brightness(1.1);
+  }
+
+  .wordmark {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--game);
+    letter-spacing: 0.02em;
+  }
+
+  .meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--dim);
+  }
+
+  .status {
+    color: var(--game);
+    background: color-mix(in srgb, var(--game) 12%, transparent);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+</style>

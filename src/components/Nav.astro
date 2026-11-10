@@ -1,0 +1,85 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  current?: string;
+}
+const { current = '' } = Astro.props;
+
+const games = (await getCollection('games', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<nav>
+  <div class="wrap bar">
+    <a href="/" class="brand">CrowGamer</a>
+    <div class="links">
+      {
+        games.map((g) => (
+          <a
+            href={`/games/${g.id}/`}
+            class:list={['link', { on: current === g.id }]}
+            style={`--game: ${g.data.accent}`}
+          >
+            {g.data.title}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(8, 9, 13, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .bar {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    gap: 24px;
+  }
+
+  .brand {
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+
+  .links {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .link {
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dim);
+    white-space: nowrap;
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .link:hover,
+  .link.on {
+    color: var(--game);
+    background: color-mix(in srgb, var(--game) 12%, transparent);
+  }
+</style>

@@ -1,0 +1,185 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ToolCard from '../../components/ToolCard.astro';
+
+export async function getStaticPaths() {
+  const games = await getCollection('games', ({ data }) => !data.draft);
+  return games.map((game) => ({ params: { slug: game.id }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const d = game.data;
+const { Content } = await render(game);
+
+const statusLabel = {
+  completed: 'Completed 100%',
+  'in-progress': 'In progress',
+  planned: 'Planned',
+}[d.status];
+---
+
+<Base
+  title={`${d.title} — CrowGamer`}
+  description={d.summary}
+  accent={d.accent}
+  current={game.id}
+>
+  <div class="wrap">
+    <header class="hero">
+      <a href="/" class="back">← All games</a>
+      <h1>{d.title}</h1>
+      <p class="tagline">{d.tagline}</p>
+
+      <div class="chips">
+        <span class="chip">{d.genre}</span>
+        <span class="chip">{statusLabel}</span>
+        {d.hours && <span class="chip">{d.hours} hours</span>}
+      </div>
+
+      <p class="summary">{d.summary}</p>
+    </header>
+
+    {
+      d.tools.length > 0 && (
+        <section>
+          <h2 class="section-title">Tools &amp; Guides</h2>
+          <div class="tools">
+            {d.tools.map((tool) => (
+              <ToolCard tool={tool} slug={game.id} />
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      d.tips.length > 0 && (
+        <section>
+          <h2 class="section-title">Quick Tips</h2>
+          <ol class="tips">
+            {d.tips.map((tip) => (
+              <li>{tip}</li>
+            ))}
+          </ol>
+        </section>
+      )
+    }
+
+    <section class="prose">
+      <Content />
+    </section>
+  </div>
+</Base>
+
+<style>
+  .hero {
+    padding: 48px 0 32px;
+  }
+
+  .back {
+    color: var(--dim);
+    font-size: 11px;
+  }
+  .back:hover {
+    color: var(--accent);
+  }
+
+  h1 {
+    font-size: clamp(28px, 8vw, 38px);
+    font-weight: 700;
+    margin: 8px 0 6px;
+    color: var(--accent);
+  }
+
+  .tagline {
+    font-size: 16px;
+    color: var(--text);
+    margin: 0 0 12px;
+    font-weight: 500;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .chip {
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--accent);
+    background: var(--accent-dim);
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .summary {
+    font-size: 13px;
+    color: var(--dim);
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0;
+  }
+
+  section {
+    margin-bottom: 32px;
+  }
+
+  .tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+  }
+
+  .tips {
+    list-style: none;
+    counter-reset: tip;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tips li {
+    counter-increment: tip;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--dim);
+    line-height: 1.6;
+  }
+
+  .tips li::before {
+    content: counter(tip) '.';
+    color: var(--accent);
+    font-family: var(--mono);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .prose {
+    max-width: 700px;
+    color: var(--dim);
+    font-size: 13px;
+    line-height: 1.8;
+    padding-bottom: 48px;
+  }
+
+  .prose :global(h2) {
+    color: var(--text);
+    font-size: 18px;
+    margin-top: 32px;
+  }
+
+  .prose :global(a) {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+</style>
