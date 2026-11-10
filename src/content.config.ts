@@ -14,7 +14,7 @@ const games = defineCollection({
       status: z.enum(['completed', 'in-progress', 'planned']).default('planned'),
       /** 0-100; omit if you aren't tracking completion for this game */
       completion: z.number().min(0).max(100).optional(),
-      hours: z.string().optional(),
+      // No hours-played field. Playtime is a vanity number, not information.
 
       /** Hex color this game wears. Becomes --accent on its own pages only. */
       accent: z.string().regex(/^#[0-9a-fA-F]{6}$/, 'accent must be a #rrggbb hex color'),

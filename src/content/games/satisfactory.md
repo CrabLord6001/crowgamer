@@ -4,7 +4,6 @@ tagline: Factory builder on an alien planet
 genre: Factory Builder
 summary: Optimize your production, tame the spaghetti, and somersloop the bottlenecks. Tools and notes from a 500+ hour run.
 status: in-progress
-hours: "500+"
 accent: "#f97316"
 logo: ../../assets/games/Satisfactory_logo.webp
 order: 1
