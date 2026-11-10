@@ -1,0 +1,28 @@
+name: Nightly sheet sync
+
+# The Skyrim progress numbers are read from the Google Sheet at build time, so
+# the site only picks up sheet edits when it rebuilds. This pings Vercel's
+# deploy hook once a night to do that without anyone remembering to.
+
+on:
+  schedule:
+    # 09:23 UTC — a bit after 4am in New York. Off the hour on purpose:
+    # GitHub delays scheduled jobs when everyone piles onto :00.
+    - cron: '23 9 * * *'
+  workflow_dispatch: # lets you trigger a rebuild by hand from the Actions tab
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "VERCEL_DEPLOY_HOOK is not set — add it in Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          # --fail so a rejected hook fails the job loudly instead of passing silently.
+          curl --fail --silent --show-error -X POST "$HOOK" > /dev/null
+          echo "Deploy triggered."
