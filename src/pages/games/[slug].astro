@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import ToolCard from '../../components/ToolCard.astro';
 import Progress from '../../components/Progress.astro';
 import Cta from '../../components/Cta.astro';
+import { fetchProgress } from '../../lib/sheet-progress';
 
 export async function getStaticPaths() {
   const games = await getCollection('games', ({ data }) => !data.draft);
@@ -13,6 +14,24 @@ export async function getStaticPaths() {
 const { game } = Astro.props;
 const d = game.data;
 const { Content } = await render(game);
+
+// Live numbers win; the frontmatter snapshot is the fallback when the sheet
+// can't be read, so an outage degrades to stale data rather than a failed build.
+let progress = d.progress;
+if (d.progress?.sheetId) {
+  const live = await fetchProgress(d.progress.sheetId, d.progress.sheetTab);
+  if (live) {
+    progress = {
+      ...d.progress,
+      overall: live.overall,
+      trackers: live.trackers.length ? live.trackers : d.progress.trackers,
+      breakdown: live.breakdown.length ? live.breakdown : d.progress.breakdown,
+      notes: live.notes.length ? live.notes : d.progress.notes,
+      updated: live.fetchedAt,
+      live: true,
+    };
+  }
+}
 
 const statusLabel = {
   completed: 'Completed 100%',
@@ -42,7 +61,7 @@ const statusLabel = {
       <p class="summary">{d.summary}</p>
     </header>
 
-    {d.progress && <Progress progress={d.progress} />}
+    {progress && <Progress progress={progress} />}
 
     {d.cta && <Cta cta={d.cta} />}
 

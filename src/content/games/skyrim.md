@@ -7,6 +7,9 @@ status: in-progress
 accent: "#5ba3dd"
 order: 2
 progress:
+  # Live numbers are read from this sheet at build time. Everything below is
+  # the fallback used if the sheet can't be reached during a build.
+  sheetId: 1HwmBbZSUTTtIJuYoItkbwlvWwvoTUdCZZlB7GQkKgc8
   updated: 2026-11-10
   overall: 9.6
   trackers:

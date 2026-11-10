@@ -141,6 +141,13 @@
               "type": "string",
               "format": "uri"
             },
+            "sheetId": {
+              "type": "string"
+            },
+            "sheetTab": {
+              "type": "string",
+              "default": "Progress"
+            },
             "overall": {
               "type": "number",
               "minimum": 0,

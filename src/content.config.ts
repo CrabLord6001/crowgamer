@@ -54,9 +54,16 @@ const games = defineCollection({
       /** Snapshot of completion progress. Omit for games you aren't tracking. */
       progress: z
         .object({
-          /** When these numbers were last read off the tracker */
+          /** When the snapshot below was last read off the tracker by hand */
           updated: z.coerce.date(),
           source: z.string().url().optional(),
+          /**
+           * Google Sheet id. When set, the build reads live numbers from this
+           * sheet's Progress tab and the values below are only a fallback.
+           * The sheet needs "anyone with the link can view" — nothing more.
+           */
+          sheetId: z.string().optional(),
+          sheetTab: z.string().default('Progress'),
           /** Headline percentage, 0-100 */
           overall: z.number().min(0).max(100),
           trackers: z

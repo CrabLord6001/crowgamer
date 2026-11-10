@@ -9,6 +9,8 @@ interface Props {
   progress: {
     updated: Date;
     source?: string;
+    /** True when the numbers came from the sheet during this build */
+    live?: boolean;
     overall: number;
     trackers: Row[];
     breakdownLabel?: string;
@@ -107,7 +109,7 @@ const updated = p.updated.toLocaleDateString('en-US', {
   }
 
   <p class="stamp">
-    Read from the tracker on {updated}
+    {p.live ? 'Synced from the tracker' : 'Last read from the tracker'} on {updated}
     {p.source && (
       <>
         {' · '}
