@@ -1,7 +1,11 @@
 /** Shared helpers for reading a link-viewable Google Sheet tab as CSV at build time. */
 
 export function csvUrl(spreadsheetId: string, tab: string) {
-  return `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tab)}`;
+  // headers=1 is not optional. Without it gviz guesses how many leading rows are
+  // header, and on a tab whose first data rows are mostly text it guesses several
+  // and concatenates them into one row — silently losing those ingredients or
+  // followers and corrupting the header.
+  return `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:csv&headers=1&sheet=${encodeURIComponent(tab)}`;
 }
 
 /** Minimal RFC-4180 parser: handles quoted fields and escaped quotes. */

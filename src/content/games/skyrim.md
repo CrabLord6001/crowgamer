@@ -51,6 +51,11 @@ tools:
     icon: "⚗️"
     route: alchemy
     ready: true
+  - name: Follower Lookup
+    desc: All 130 followers — where they go when dismissed, prerequisite quest, level cap, skills and marriage status
+    icon: "🛡️"
+    route: followers
+    ready: true
   - name: Dungeon Index
     desc: Every clearable location by hold, with type, enemies and word walls
     icon: "🏔️"

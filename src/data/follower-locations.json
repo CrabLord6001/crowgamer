@@ -1,0 +1,322 @@
+{
+  "Delphine": {
+    "loc": "Sleeping Giant Inn / Sky Haven Temple"
+  },
+  "Avulstein Gray-Mane": {
+    "city": "Whiterun",
+    "house": "House Gray-Mane"
+  },
+  "Brynjolf": {
+    "city": "Riften"
+  },
+  "Aela the Huntress": {
+    "city": "Whiterun",
+    "loc": "Jorrvaskr"
+  },
+  "Calder": {
+    "city": "Windhelm",
+    "loc": "Hjerim"
+  },
+  "Argis the Bulwark": {
+    "city": "Markarth",
+    "loc": "Vlindrel Hall"
+  },
+  "Belrand": {
+    "city": "Solitude",
+    "loc": "The Winking Skeever"
+  },
+  "Cicero": {
+    "loc": "Loreius Farm / Dark Brotherhood Sanctuary / Dawnstar Sanctuary"
+  },
+  "Chief Yamarz": {
+    "house": "Largashbur Longhouse"
+  },
+  "Aranea Ienith": {
+    "city": "Winterhold",
+    "loc": "Shrine of Azura"
+  },
+  "Brelyna Maryon": {
+    "city": "Winterhold",
+    "loc": "College of Winterhold / Hall of Attainment"
+  },
+  "Athis": {
+    "city": "Whiterun",
+    "loc": "Jorrvaskr"
+  },
+  "Borgakh the Steel Heart": {
+    "house": "Larak's Longhouse"
+  },
+  "Adelaisa Vendicci": {
+    "city": "Windhelm",
+    "loc": "East Empire Company"
+  },
+  "Derkeethus": {
+    "loc": "Darkwater Pass; relocates to Darkwater Crossing after his related quest"
+  },
+  "Annekke Crag-Jumper": {
+    "house": "Verner and Annekke's House"
+  },
+  "Benor": {
+    "city": "Morthal",
+    "loc": "Guardhouse"
+  },
+  "Cosnach": {
+    "city": "Markarth",
+    "loc": "The Warrens"
+  },
+  "Brother Verulus": {
+    "city": "Markarth",
+    "loc": "Hall of the Dead (Initially Understone Keep)"
+  },
+  "Ahtar": {
+    "city": "Solitude",
+    "house": "Jala's House"
+  },
+  "Babette": {
+    "loc": "Dark Brotherhood Sanctuary / Dawnstar Sanctuary"
+  },
+  "Anska": {
+    "loc": "High Gate Ruins"
+  },
+  "Durak": {
+    "house": "Fort Dawnguard"
+  },
+  "Agmaer": {
+    "loc": "Fort Dawnguard"
+  },
+  "Celann": {
+    "loc": "Fort Dawnguard"
+  },
+  "Beleval": {
+    "loc": "Fort Dawnguard"
+  },
+  "Bujold the Unworthy": {
+    "loc": "Bujold's Retreat / Thirsk Mead Hall"
+  },
+  "Esbern": {
+    "loc": "The Ratway, then Sky Haven Temple"
+  },
+  "Hadvar": {
+    "loc": "Helgen"
+  },
+  "Farkas": {
+    "city": "Whiterun",
+    "loc": "Jorrvaskr"
+  },
+  "Faendal": {
+    "house": "Faendal's House"
+  },
+  "Galmar Stone-Fist": {
+    "city": "Windhelm",
+    "loc": "Palace of the Kings"
+  },
+  "Erik the Slayer": {
+    "house": "Frostfruit Inn"
+  },
+  "Geirlund": {
+    "loc": "Northwatch Keep"
+  },
+  "Iona": {
+    "city": "Riften",
+    "house": "Honeyside"
+  },
+  "Jordis the Sword-Maiden": {
+    "city": "Solitude",
+    "loc": "Proudspire Manor"
+  },
+  "Lydia": {
+    "city": "Whiterun",
+    "house": "Breezehome"
+  },
+  "Illia": {
+    "loc": "Darklight Tower"
+  },
+  "Jenassa": {
+    "city": "Whiterun",
+    "house": "The Drunken Huntsman"
+  },
+  "Marcurio": {
+    "city": "Riften",
+    "loc": "The Bee and Barb"
+  },
+  "Malborn": {
+    "city": "Solitude then Windhelm"
+  },
+  "Erandur": {
+    "city": "Dawnstar",
+    "loc": "Windpeak Inn / Nightcaller Temple"
+  },
+  "Fenrig": {
+    "loc": "South of Greenspring Hollow (Whiterun Hold)"
+  },
+  "Golldir": {
+    "loc": "Hillgrund's Tomb"
+  },
+  "Fjotra": {
+    "loc": "Temple of Dibella"
+  },
+  "Maurice Jondrelle": {
+    "city": "Whiterun",
+    "loc": "Temple of Kynareth"
+  },
+  "J'zargo": {
+    "city": "Winterhold",
+    "loc": "College of Winterhold / Hall of Attainment"
+  },
+  "Kharjo": {
+    "loc": "Outside Dawnstar or Riften"
+  },
+  "Karliah": {
+    "loc": "Snow Veil Sanctum / Nightingale Hall"
+  },
+  "Lob": {
+    "house": "Largashbur Longhouse"
+  },
+  "Eola": {
+    "loc": "Hall of the Dead, Reachcliff Cave (after personal quest)"
+  },
+  "Ghorbash the Iron Hand": {
+    "house": "Burguk's Longhouse"
+  },
+  "Enmon": {
+    "house": "Enmon's House"
+  },
+  "Ingjard": {
+    "loc": "Fort Dawnguard"
+  },
+  "Gregor": {
+    "city": "Dawnstar",
+    "loc": "The White Hall"
+  },
+  "Frea": {
+    "house": "Shaman's Hut"
+  },
+  "Hand Ethra Mavandas": {
+    "loc": "Ashfall's Tear"
+  },
+  "Hand Kydren Indobar": {
+    "loc": "Ashfall's Tear"
+  },
+  "Thorald Gray-Mane": {
+    "loc": "Northwatch Keep"
+  },
+  "Ralof": {
+    "loc": "Helgen"
+  },
+  "Sinding": {
+    "loc": "Falkreath Jail, Bloated Man's Grotto"
+  },
+  "Sven": {
+    "house": "Sven and Hilde's House"
+  },
+  "Stenvar": {
+    "city": "Windhelm",
+    "loc": "Candlehearth Hall"
+  },
+  "Nazir": {
+    "loc": "Dark Brotherhood Sanctuary / Dawnstar Sanctuary"
+  },
+  "Orthorn": {
+    "loc": "Fellglow Keep Dungeons"
+  },
+  "Onmund": {
+    "city": "Winterhold",
+    "loc": "College of Winterhold / Hall of Attainment"
+  },
+  "Mercer Frey": {
+    "city": "Riften",
+    "house": "Riftweald Manor",
+    "loc": "The Ragged Flagon - Cistern"
+  },
+  "Torvar": {
+    "city": "Whiterun",
+    "loc": "Jorrvaskr"
+  },
+  "Njada Stonearm": {
+    "city": "Whiterun",
+    "loc": "Jorrvaskr"
+  },
+  "Ria": {
+    "city": "Whiterun",
+    "loc": "Jorrvaskr"
+  },
+  "Ogol": {
+    "house": "Largashbur Longhouse"
+  },
+  "Roggi Knot-Beard": {
+    "loc": "Steamscorch Mine Camp"
+  },
+  "Thonnir": {
+    "city": "Morthal",
+    "house": "Thonnir's House"
+  },
+  "Tolfdir": {
+    "city": "Winterhold",
+    "loc": "College of Winterhold / Hall of Attainment"
+  },
+  "Serana": {
+    "loc": "Dimhollow Cavern / Volkihar Keep or Fort Dawnguard"
+  },
+  "Rayya": {
+    "city": "Falkreath",
+    "loc": "Jarl's Longhouse"
+  },
+  "Tharstan": {
+    "house": "Greathall"
+  },
+  "Teldryn Sero": {
+    "city": "Raven Rock",
+    "house": "The Retching Netch"
+  },
+  "Talvas Fathryon": {
+    "house": "Tel Mithryn"
+  },
+  "Ralis Sedarys": {
+    "loc": "Kolbjorn Barrow"
+  },
+  "Neloth": {
+    "house": "Tel Mithryn"
+  },
+  "Mjoll the Lioness": {
+    "city": "Riften",
+    "house": "Aerin's House"
+  },
+  "Rulnik Wind-Strider": {
+    "city": "Whiterun",
+    "loc": "Temple of Kynareth"
+  },
+  "Vidrald": {
+    "loc": "Northwatch Keep"
+  },
+  "Vorstag": {
+    "city": "Markarth",
+    "loc": "Silver-Blood Inn"
+  },
+  "Uthgerd the Unbroken": {
+    "house": "Uthgerd's House",
+    "loc": "The Bannered Mare",
+    "city": "Whiterun"
+  },
+  "Veezara": {
+    "loc": "Dark Brotherhood Sanctuary"
+  },
+  "Valdr": {
+    "city": "Falkreath",
+    "house": "Dead Man's Drink",
+    "loc": "Outside of Moss Mother Cavern"
+  },
+  "Vilkas": {
+    "city": "Whiterun",
+    "loc": "Jorrvaskr"
+  },
+  "Valdimar": {
+    "city": "Morthal",
+    "loc": "Highmoon Hall"
+  },
+  "Vesparth the Toe": {
+    "loc": "Ashfall's Tear"
+  },
+  "Watchman Sindras": {
+    "loc": "Ashfall's Tear"
+  }
+}

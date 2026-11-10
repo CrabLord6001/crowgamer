@@ -1,0 +1,106 @@
+---
+import { getEntry } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import FollowerLookup from '../../../components/react/FollowerLookup.jsx';
+import { fetchFollowers } from '../../../lib/followers';
+import snapshot from '../../../data/followers.json';
+import '../../../styles/lookup.css';
+
+const game = await getEntry('games', 'skyrim');
+const accent = game?.data.accent;
+
+let data = snapshot;
+if (game?.data.progress?.sheetId) {
+  const live = await fetchFollowers(game.data.progress.sheetId);
+  if (live) data = live;
+}
+
+const count = data.followers.length;
+const located = data.followers.filter((f) => f.location).length;
+---
+
+<Base
+  title="Skyrim followers — where they go when dismissed | CrowGamer"
+  description={`All ${count} Skyrim followers: where each one returns to when you dismiss them, the quest that unlocks them, their level cap, primary skills, and whether they can be married, made steward or inducted into the Blades.`}
+  accent={accent}
+  current="skyrim"
+>
+  <div class="wrap">
+    <header class="hero">
+      <a href="/games/skyrim/" class="back">← Skyrim</a>
+      <h1>Followers</h1>
+      <p class="lede">
+        All {count} followers, with the thing that is annoyingly hard to look up: where
+        each one goes when you dismiss them. Click any row for their prerequisite quest
+        and the rest of the detail.
+      </p>
+    </header>
+
+    <FollowerLookup
+      client:load
+      followers={data.followers}
+      types={data.types}
+      contents={data.contents}
+    />
+
+    <div class="notes">
+      <p>
+        A dismissed follower walks back to their home and waits there, so the location
+        column is both where you first meet them and where you collect them afterwards.
+        Housecarls are the exception: they move to the house in their hold once you buy
+        it, so Lydia sits in Dragonsreach until Breezehome is yours.
+      </p>
+      <p>
+        {located} of {count} have a fixed home. The rest are animals, summons, or generic
+        NPCs with nowhere to return to.
+      </p>
+      <p class="credit">
+        Home locations from <a href="https://en.uesp.net/wiki/Skyrim:Followers" rel="noopener noreferrer" target="_blank">UESP</a>, used under CC BY-SA 2.5.
+      </p>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .hero {
+    padding: 40px 0 24px;
+  }
+  .back {
+    color: var(--dim);
+    font-size: 11px;
+  }
+  .back:hover {
+    color: var(--accent);
+  }
+  h1 {
+    font-size: clamp(26px, 7vw, 34px);
+    font-weight: 700;
+    margin: 8px 0 8px;
+    color: var(--accent);
+  }
+  .lede {
+    font-size: 13px;
+    color: var(--dim);
+    line-height: 1.7;
+    max-width: 660px;
+    margin: 0;
+  }
+  .notes {
+    max-width: 700px;
+    margin: 20px 0 48px;
+  }
+  .notes p {
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--dim);
+    opacity: 0.85;
+    margin: 0 0 8px;
+  }
+  .credit {
+    opacity: 0.6;
+  }
+  .credit a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+</style>

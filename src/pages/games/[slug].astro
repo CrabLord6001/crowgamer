@@ -33,6 +33,10 @@ if (d.progress?.sheetId) {
   }
 }
 
+// Only live tools are shown. A grid of "coming soon" cards is filler, and a
+// tool that isn't built yet is better represented by its absence.
+const tools = d.tools.filter((t) => t.ready);
+
 const statusLabel = {
   completed: 'Completed 100%',
   'in-progress': 'In progress',
@@ -66,11 +70,11 @@ const statusLabel = {
     {d.cta && <Cta cta={d.cta} />}
 
     {
-      d.tools.length > 0 && (
+      tools.length > 0 && (
         <section>
           <h2 class="section-title">Tools &amp; Guides</h2>
           <div class="tools">
-            {d.tools.map((tool) => (
+            {tools.map((tool) => (
               <ToolCard tool={tool} slug={game.id} />
             ))}
           </div>
