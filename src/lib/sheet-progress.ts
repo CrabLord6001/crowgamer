@@ -119,13 +119,21 @@ export async function fetchProgress(
     return r ? { label, done: num(r[1]), total: num(r[2]) } : null;
   }).filter((t): t is NonNullable<typeof t> => t !== null && t.total > 0);
 
-  // The hold table is whatever follows the "Hold / Region" header row.
+  // The hold table follows the "Hold / Region" header and ends with its own
+  // "Total" row. Do NOT rely on a blank row to terminate it: the gviz CSV omits
+  // empty rows, so scanning until one appears swallows every later section of
+  // the tab (content splits, quests, achievements...) as if they were regions.
   const headerIdx = rows.findIndex((r) => clean(r[0]).startsWith('Hold / Region'));
   const breakdown: SheetProgress['breakdown'] = [];
   if (headerIdx !== -1) {
-    for (const r of rows.slice(headerIdx + 1)) {
+    for (const r of rows.slice(headerIdx + 1, headerIdx + 1 + 40)) {
       const name = clean(r[0]);
-      if (!name) break;
+      if (!name || /^total$/i.test(name)) break;
+
+      // A region row has a numeric total and cleared count; anything else means
+      // we've wandered out of the table.
+      if (!/^\d+$/.test(clean(r[1])) || !/^\d+$/.test(clean(r[2]))) break;
+
       breakdown.push({ name, done: num(r[2]), total: num(r[1]) });
     }
     breakdown.sort((a, b) => b.done / (b.total || 1) - a.done / (a.total || 1));

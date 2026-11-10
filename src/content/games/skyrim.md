@@ -28,6 +28,11 @@ progress:
     - { name: The Pale, done: 3, total: 21 }
     - { name: Haafingar, done: 0, total: 27 }
     - { name: Hjaalmarch, done: 0, total: 16 }
+    - { name: The Reach, done: 0, total: 36 }
+    - { name: Solstheim, done: 0, total: 41 }
+    - { name: Forgotten Vale, done: 0, total: 8 }
+    - { name: Soul Cairn, done: 0, total: 3 }
+    - { name: Not on the map, done: 0, total: 1 }
   notes:
     - { label: Toward Delver (50), value: "33" }
     - { label: Word walls cleared, value: "2 / 40" }
