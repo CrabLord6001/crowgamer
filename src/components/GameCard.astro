@@ -4,8 +4,10 @@ import type { CollectionEntry } from 'astro:content';
 
 interface Props {
   game: CollectionEntry<'games'>;
+  /** Live completion for games that track it. Omitted games just show status. */
+  overall?: number;
 }
-const { game } = Astro.props;
+const { game, overall } = Astro.props;
 const d = game.data;
 
 const statusLabel = {
@@ -41,7 +43,16 @@ const logoHeight = portrait ? 104 : 72;
 
   <span class="meta">
     <span class="status">{statusLabel}</span>
+    {overall !== undefined && <span class="pct">{overall < 10 ? overall.toFixed(1) : Math.round(overall)}%</span>}
   </span>
+
+  {
+    overall !== undefined && (
+      <span class="bar" role="img" aria-label={`${Math.round(overall)} percent complete`}>
+        <span class="fill" style={`width: ${Math.max(overall, 1)}%`} />
+      </span>
+    )
+  }
 </a>
 
 <style>
@@ -126,5 +137,30 @@ const logoHeight = portrait ? 104 : 72;
     background: color-mix(in srgb, var(--game) 12%, transparent);
     padding: 3px 8px;
     border-radius: 4px;
+  }
+
+  .pct {
+    color: var(--dim);
+  }
+
+  /* Only drawn for games that actually track completion, so a card without a
+     tracker doesn't imply 0%. */
+  .bar {
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--border);
+    overflow: hidden;
+  }
+
+  .fill {
+    display: block;
+    height: 100%;
+    background: var(--game);
+    opacity: 0.8;
+  }
+
+  .card:hover .fill {
+    opacity: 1;
   }
 </style>
