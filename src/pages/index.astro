@@ -32,8 +32,6 @@ for (const g of games) {
   <div class="wrap">
     <header class="hero">
       <h1>CrowGamer</h1>
-      <p class="lede">Personal tools and notes for the games I play.</p>
-      <p class="by">by Jonathan Crow</p>
     </header>
 
     <SiteSearch client:idle />
@@ -47,7 +45,7 @@ for (const g of games) {
 <style>
   .hero {
     text-align: center;
-    padding: 60px 0 40px;
+    padding: 60px 0 32px;
   }
 
   h1 {
@@ -60,21 +58,7 @@ for (const g of games) {
     -webkit-text-fill-color: transparent;
   }
 
-  .lede {
-    color: var(--dim);
-    font-size: 14px;
-    margin: 0 auto 6px;
-    max-width: 500px;
-    line-height: 1.7;
-  }
 
-  .by {
-    color: var(--dim);
-    font-size: 11px;
-    font-family: var(--mono);
-    opacity: 0.5;
-    margin: 0;
-  }
 
   .grid {
     display: grid;
