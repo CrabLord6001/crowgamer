@@ -435,11 +435,22 @@
 }
 
 @media (max-width: 720px) {
+  /* A select is as wide as its longest option, so the two of them can never
+     share a line on their own. Pin them to half each and let them truncate. */
+  .flw-q {
+    flex: 1 1 100%;
+  }
+  .flw-bar > .alc-dlc {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    text-overflow: ellipsis;
+  }
   .flw-flags {
-    width: 100%;
+    flex: 1 1 100%;
   }
   .flw-flag {
     flex: 1;
+    padding: 9px 6px;
   }
 }
 
