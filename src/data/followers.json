@@ -21,7 +21,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "East Empire Company, Windhelm"
+      "location": "East Empire Company, Windhelm",
+      "gender": "Female"
     },
     {
       "name": "Aela the Huntress",
@@ -42,6 +43,7 @@
       "content": "Base",
       "notes": "",
       "location": "Jorrvaskr, Whiterun",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Nord",
@@ -69,7 +71,8 @@
       "canBlades": true,
       "content": "Dawnguard",
       "notes": "",
-      "location": "Fort Dawnguard"
+      "location": "Fort Dawnguard",
+      "gender": "Male"
     },
     {
       "name": "Ahtar",
@@ -88,7 +91,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Jala's House, Solitude"
+      "location": "Jala's House, Solitude",
+      "gender": "Male"
     },
     {
       "name": "Annekke Crag-Jumper",
@@ -107,7 +111,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Verner and Annekke's House"
+      "location": "Verner and Annekke's House",
+      "gender": "Female"
     },
     {
       "name": "Anska",
@@ -121,7 +126,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "High Gate Ruins"
+      "location": "High Gate Ruins",
+      "gender": "Female"
     },
     {
       "name": "Arachnia",
@@ -135,7 +141,8 @@
       "canBlades": false,
       "content": "Creation Club: Pets of Skyrim",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Aranea Ienith",
@@ -154,7 +161,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Shrine of Azura, Winterhold"
+      "location": "Shrine of Azura, Winterhold",
+      "gender": "Female"
     },
     {
       "name": "Argis the Bulwark",
@@ -174,6 +182,7 @@
       "content": "Base",
       "notes": "",
       "location": "Vlindrel Hall, Markarth",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -196,7 +205,8 @@
       "canBlades": false,
       "content": "Dawnguard",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Armored Troll",
@@ -210,7 +220,8 @@
       "canBlades": false,
       "content": "Dawnguard",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Athis",
@@ -230,6 +241,7 @@
       "content": "Base",
       "notes": "",
       "location": "Jorrvaskr, Whiterun",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Dark Elf",
@@ -252,7 +264,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "House Gray-Mane, Whiterun"
+      "location": "House Gray-Mane, Whiterun",
+      "gender": "Male"
     },
     {
       "name": "Babette",
@@ -266,7 +279,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "Dark Brotherhood Sanctuary / Dawnstar Sanctuary"
+      "location": "Dark Brotherhood Sanctuary / Dawnstar Sanctuary",
+      "gender": "Female"
     },
     {
       "name": "Barbas",
@@ -280,7 +294,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Beleval",
@@ -299,7 +314,8 @@
       "canBlades": true,
       "content": "Dawnguard",
       "notes": "",
-      "location": "Fort Dawnguard"
+      "location": "Fort Dawnguard",
+      "gender": "Female"
     },
     {
       "name": "Belrand",
@@ -319,6 +335,7 @@
       "content": "Base",
       "notes": "",
       "location": "The Winking Skeever, Solitude",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -347,6 +364,7 @@
       "content": "Base",
       "notes": "",
       "location": "Guardhouse, Morthal",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -369,7 +387,8 @@
       "canBlades": false,
       "content": "Dragonborn",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Blades Recruits",
@@ -383,7 +402,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Bone Wolf",
@@ -397,7 +417,8 @@
       "canBlades": false,
       "content": "Creation Club: Bone Wolf",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Borgakh the Steel Heart",
@@ -417,6 +438,7 @@
       "content": "Base",
       "notes": "",
       "location": "Larak's Longhouse",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Orc",
@@ -439,7 +461,8 @@
       "canBlades": false,
       "content": "Dawnguard",
       "notes": "Can become a pet",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Brelyna Maryon",
@@ -459,6 +482,7 @@
       "content": "Base",
       "notes": "",
       "location": "College of Winterhold / Hall of Attainment",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Dark Elf",
@@ -481,7 +505,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "Hall of the Dead (Initially Understone Keep), Markarth"
+      "location": "Hall of the Dead (Initially Understone Keep), Markarth",
+      "gender": "Male"
     },
     {
       "name": "Brynjolf",
@@ -495,7 +520,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "Riften"
+      "location": "Riften",
+      "gender": "Male"
     },
     {
       "name": "Bujold the Unworthy",
@@ -509,7 +535,8 @@
       "canBlades": false,
       "content": "Dragonborn",
       "notes": "",
-      "location": "Bujold's Retreat / Thirsk Mead Hall"
+      "location": "Bujold's Retreat / Thirsk Mead Hall",
+      "gender": "Female"
     },
     {
       "name": "Calder",
@@ -529,6 +556,7 @@
       "content": "Base",
       "notes": "",
       "location": "Hjerim, Windhelm",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -556,7 +584,8 @@
       "canBlades": true,
       "content": "Dawnguard",
       "notes": "",
-      "location": "Fort Dawnguard"
+      "location": "Fort Dawnguard",
+      "gender": "Male"
     },
     {
       "name": "Chief Yamarz",
@@ -570,7 +599,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Largashbur Longhouse"
+      "location": "Largashbur Longhouse",
+      "gender": "Male"
     },
     {
       "name": "Cicero",
@@ -589,7 +619,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Loreius Farm / Dark Brotherhood Sanctuary / Dawnstar Sanctuary"
+      "location": "Loreius Farm / Dark Brotherhood Sanctuary / Dawnstar Sanctuary",
+      "gender": "Male"
     },
     {
       "name": "Cosnach",
@@ -609,6 +640,7 @@
       "content": "Base",
       "notes": "",
       "location": "The Warrens, Markarth",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Breton",
@@ -631,7 +663,8 @@
       "canBlades": false,
       "content": "Dawnguard",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Dark Brotherhood Initiate (female)",
@@ -650,7 +683,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": "Female"
     },
     {
       "name": "Dark Brotherhood Initiate (male)",
@@ -669,7 +703,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": "Male"
     },
     {
       "name": "Delphine",
@@ -683,7 +718,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "Sleeping Giant Inn / Sky Haven Temple"
+      "location": "Sleeping Giant Inn / Sky Haven Temple",
+      "gender": "Female"
     },
     {
       "name": "Demented Elytra Nymph",
@@ -697,7 +733,8 @@
       "canBlades": false,
       "content": "Creation Club: Saints & Seducers",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Derkeethus",
@@ -717,6 +754,7 @@
       "content": "Base",
       "notes": "",
       "location": "Darkwater Pass; relocates to Darkwater Crossing after his related quest",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Argonian",
@@ -744,7 +782,8 @@
       "canBlades": true,
       "content": "Dawnguard",
       "notes": "",
-      "location": "Fort Dawnguard"
+      "location": "Fort Dawnguard",
+      "gender": "Male"
     },
     {
       "name": "Durian",
@@ -758,7 +797,8 @@
       "canBlades": false,
       "content": "Creation Club: Bloodchill Manor",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": "Male"
     },
     {
       "name": "Dwarven Armored Mudcrab",
@@ -772,7 +812,8 @@
       "canBlades": false,
       "content": "Creation Club: Dwarven Armored Mudcrab",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Enmon",
@@ -786,7 +827,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Enmon's House"
+      "location": "Enmon's House",
+      "gender": "Male"
     },
     {
       "name": "Eola",
@@ -805,7 +847,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Hall of the Dead, Reachcliff Cave (after personal quest)"
+      "location": "Hall of the Dead, Reachcliff Cave (after personal quest)",
+      "gender": "Female"
     },
     {
       "name": "Erandur",
@@ -825,7 +868,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Windpeak Inn / Nightcaller Temple, Dawnstar"
+      "location": "Windpeak Inn / Nightcaller Temple, Dawnstar",
+      "gender": "Male"
     },
     {
       "name": "Erik the Slayer",
@@ -844,7 +888,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Frostfruit Inn"
+      "location": "Frostfruit Inn",
+      "gender": "Male"
     },
     {
       "name": "Esbern",
@@ -858,7 +903,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "The Ratway, then Sky Haven Temple"
+      "location": "The Ratway, then Sky Haven Temple",
+      "gender": "Male"
     },
     {
       "name": "Faendal",
@@ -878,7 +924,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Faendal's House"
+      "location": "Faendal's House",
+      "gender": "Male"
     },
     {
       "name": "Farkas",
@@ -898,6 +945,7 @@
       "content": "Base",
       "notes": "",
       "location": "Jorrvaskr, Whiterun",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -920,7 +968,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "South of Greenspring Hollow (Whiterun Hold)"
+      "location": "South of Greenspring Hollow (Whiterun Hold)",
+      "gender": "Male"
     },
     {
       "name": "Fjotra",
@@ -934,7 +983,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "Temple of Dibella"
+      "location": "Temple of Dibella",
+      "gender": "Female"
     },
     {
       "name": "Frea",
@@ -953,7 +1003,8 @@
       "canBlades": true,
       "content": "Dragonborn",
       "notes": "",
-      "location": "Shaman's Hut"
+      "location": "Shaman's Hut",
+      "gender": "Female"
     },
     {
       "name": "Galmar Stone-Fist",
@@ -967,7 +1018,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Palace of the Kings, Windhelm"
+      "location": "Palace of the Kings, Windhelm",
+      "gender": "Male"
     },
     {
       "name": "Garmr",
@@ -981,7 +1033,8 @@
       "canBlades": false,
       "content": "Dawnguard",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Geirlund",
@@ -995,7 +1048,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Northwatch Keep"
+      "location": "Northwatch Keep",
+      "gender": "Male"
     },
     {
       "name": "Ghorbash the Iron Hand",
@@ -1015,6 +1069,7 @@
       "content": "Base",
       "notes": "",
       "location": "Burguk's Longhouse",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Orc",
@@ -1037,7 +1092,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Gogh",
@@ -1051,7 +1107,8 @@
       "canBlades": false,
       "content": "Creation Club: Goblins",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Golldir",
@@ -1070,7 +1127,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Hillgrund's Tomb"
+      "location": "Hillgrund's Tomb",
+      "gender": "Male"
     },
     {
       "name": "Gregor",
@@ -1090,6 +1148,7 @@
       "content": "Hearthfire",
       "notes": "",
       "location": "The White Hall, Dawnstar",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -1112,7 +1171,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "Helgen"
+      "location": "Helgen",
+      "gender": "Male"
     },
     {
       "name": "Hand Ethra Mavandas",
@@ -1131,7 +1191,8 @@
       "canBlades": true,
       "content": "Creation Club: Ghosts of the Tribunal",
       "notes": "",
-      "location": "Ashfall's Tear"
+      "location": "Ashfall's Tear",
+      "gender": "Female"
     },
     {
       "name": "Hand Kydren Indobar",
@@ -1150,7 +1211,8 @@
       "canBlades": true,
       "content": "Creation Club: Ghosts of the Tribunal",
       "notes": "",
-      "location": "Ashfall's Tear"
+      "location": "Ashfall's Tear",
+      "gender": "Male"
     },
     {
       "name": "Hilda",
@@ -1164,7 +1226,8 @@
       "canBlades": false,
       "content": "Creation Club: Pets of Skyrim",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Illia",
@@ -1183,7 +1246,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Darklight Tower"
+      "location": "Darklight Tower",
+      "gender": "Female"
     },
     {
       "name": "Imperial Soldiers",
@@ -1197,7 +1261,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Ingjard",
@@ -1216,7 +1281,8 @@
       "canBlades": true,
       "content": "Dawnguard",
       "notes": "",
-      "location": "Fort Dawnguard"
+      "location": "Fort Dawnguard",
+      "gender": "Female"
     },
     {
       "name": "Iona",
@@ -1236,6 +1302,7 @@
       "content": "Base",
       "notes": "",
       "location": "Honeyside, Riften",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Nord",
@@ -1263,7 +1330,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "College of Winterhold / Hall of Attainment"
+      "location": "College of Winterhold / Hall of Attainment",
+      "gender": "Male"
     },
     {
       "name": "Jenassa",
@@ -1283,6 +1351,7 @@
       "content": "Base",
       "notes": "",
       "location": "The Drunken Huntsman, Whiterun",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Dark Elf",
@@ -1311,6 +1380,7 @@
       "content": "Base",
       "notes": "",
       "location": "Proudspire Manor, Solitude",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Nord",
@@ -1333,7 +1403,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "Snow Veil Sanctum / Nightingale Hall"
+      "location": "Snow Veil Sanctum / Nightingale Hall",
+      "gender": "Female"
     },
     {
       "name": "Katria",
@@ -1347,7 +1418,8 @@
       "canBlades": false,
       "content": "Dawnguard",
       "notes": "Essential",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Kharjo",
@@ -1366,7 +1438,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Outside Dawnstar or Riften"
+      "location": "Outside Dawnstar or Riften",
+      "gender": "Male"
     },
     {
       "name": "Lob",
@@ -1385,7 +1458,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Largashbur Longhouse"
+      "location": "Largashbur Longhouse",
+      "gender": "Male"
     },
     {
       "name": "Lydia",
@@ -1405,6 +1479,7 @@
       "content": "Base",
       "notes": "",
       "location": "Breezehome, Whiterun",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Nord",
@@ -1427,7 +1502,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "Solitude then Windhelm"
+      "location": "Solitude then Windhelm",
+      "gender": "Male"
     },
     {
       "name": "Manic Elytra Nymph",
@@ -1441,7 +1517,8 @@
       "canBlades": false,
       "content": "Creation Club: Saints & Seducers",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Marcurio",
@@ -1461,6 +1538,7 @@
       "content": "Base",
       "notes": "",
       "location": "The Bee and Barb, Riften",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Imperial",
@@ -1483,7 +1561,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Temple of Kynareth, Whiterun"
+      "location": "Temple of Kynareth, Whiterun",
+      "gender": "Male"
     },
     {
       "name": "Meeko",
@@ -1497,7 +1576,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Can become a pet",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Mercer Frey",
@@ -1511,7 +1591,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "The Ragged Flagon - Cistern, Riften"
+      "location": "The Ragged Flagon - Cistern, Riften",
+      "gender": "Male"
     },
     {
       "name": "Mjoll the Lioness",
@@ -1531,6 +1612,7 @@
       "content": "Base",
       "notes": "",
       "location": "Aerin's House, Riften",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Nord",
@@ -1553,7 +1635,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "Dark Brotherhood Sanctuary / Dawnstar Sanctuary"
+      "location": "Dark Brotherhood Sanctuary / Dawnstar Sanctuary",
+      "gender": "Male"
     },
     {
       "name": "Neloth",
@@ -1567,7 +1650,8 @@
       "canBlades": false,
       "content": "Dragonborn",
       "notes": "",
-      "location": "Tel Mithryn"
+      "location": "Tel Mithryn",
+      "gender": "Male"
     },
     {
       "name": "Nix-Hound",
@@ -1581,7 +1665,8 @@
       "canBlades": false,
       "content": "Creation Club: Nix-Hound",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Njada Stonearm",
@@ -1601,6 +1686,7 @@
       "content": "Base",
       "notes": "",
       "location": "Jorrvaskr, Whiterun",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Nord",
@@ -1628,7 +1714,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Largashbur Longhouse"
+      "location": "Largashbur Longhouse",
+      "gender": "Male"
     },
     {
       "name": "Onmund",
@@ -1648,6 +1735,7 @@
       "content": "Base",
       "notes": "",
       "location": "College of Winterhold / Hall of Attainment",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -1670,7 +1758,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Fellglow Keep Dungeons"
+      "location": "Fellglow Keep Dungeons",
+      "gender": "Male"
     },
     {
       "name": "Ralis Sedarys",
@@ -1689,7 +1778,8 @@
       "canBlades": true,
       "content": "Dragonborn",
       "notes": "",
-      "location": "Kolbjorn Barrow"
+      "location": "Kolbjorn Barrow",
+      "gender": "Male"
     },
     {
       "name": "Ralof",
@@ -1703,7 +1793,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "Helgen"
+      "location": "Helgen",
+      "gender": "Male"
     },
     {
       "name": "Rayya",
@@ -1723,6 +1814,7 @@
       "content": "Hearthfire",
       "notes": "",
       "location": "Jarl's Longhouse, Falkreath",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Redguard",
@@ -1745,7 +1837,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Ria",
@@ -1765,6 +1858,7 @@
       "content": "Base",
       "notes": "",
       "location": "Jorrvaskr, Whiterun",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Imperial",
@@ -1787,7 +1881,8 @@
       "canBlades": false,
       "content": "Dragonborn",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Roggi Knot-Beard",
@@ -1809,6 +1904,7 @@
       "content": "Base",
       "notes": "",
       "location": "Steamscorch Mine Camp",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -1837,6 +1933,7 @@
       "content": "Creation Club: Bittercup",
       "notes": "",
       "location": "Temple of Kynareth, Whiterun",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -1859,7 +1956,8 @@
       "canBlades": false,
       "content": "Dawnguard",
       "notes": "Can become a pet",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Serana",
@@ -1878,7 +1976,8 @@
       "canBlades": false,
       "content": "Dawnguard",
       "notes": "",
-      "location": "Dimhollow Cavern / Volkihar Keep or Fort Dawnguard"
+      "location": "Dimhollow Cavern / Volkihar Keep or Fort Dawnguard",
+      "gender": "Female"
     },
     {
       "name": "Sinding",
@@ -1892,7 +1991,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Falkreath Jail, Bloated Man's Grotto"
+      "location": "Falkreath Jail, Bloated Man's Grotto",
+      "gender": "Male"
     },
     {
       "name": "Skritch",
@@ -1906,7 +2006,8 @@
       "canBlades": false,
       "content": "Creation Club: Pets of Skyrim",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Steadfast Dwarven Sphere",
@@ -1920,7 +2021,8 @@
       "canBlades": false,
       "content": "Dragonborn",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Steadfast Dwarven Spider",
@@ -1934,7 +2036,8 @@
       "canBlades": false,
       "content": "Dragonborn",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Stenvar",
@@ -1954,6 +2057,7 @@
       "content": "Base",
       "notes": "",
       "location": "Candlehearth Hall, Windhelm",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -1976,7 +2080,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Stormcloak Soldiers",
@@ -1990,7 +2095,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Stray Dog",
@@ -2004,7 +2110,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Can become a pet",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Sven",
@@ -2025,7 +2132,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": "Sven and Hilde's House"
+      "location": "Sven and Hilde's House",
+      "gender": "Male"
     },
     {
       "name": "Sweet Roll",
@@ -2039,7 +2147,8 @@
       "canBlades": false,
       "content": "Creation Club: Pets of Skyrim",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Talvas Fathryon",
@@ -2059,7 +2168,8 @@
       "canBlades": true,
       "content": "Dragonborn",
       "notes": "",
-      "location": "Tel Mithryn"
+      "location": "Tel Mithryn",
+      "gender": "Male"
     },
     {
       "name": "Teldryn Sero",
@@ -2078,7 +2188,8 @@
       "canBlades": true,
       "content": "Dragonborn",
       "notes": "",
-      "location": "The Retching Netch, Raven Rock"
+      "location": "The Retching Netch, Raven Rock",
+      "gender": "Male"
     },
     {
       "name": "Tharstan",
@@ -2092,7 +2203,8 @@
       "canBlades": false,
       "content": "Dragonborn",
       "notes": "",
-      "location": "Greathall"
+      "location": "Greathall",
+      "gender": "Male"
     },
     {
       "name": "Thistle",
@@ -2106,7 +2218,8 @@
       "canBlades": false,
       "content": "Creation Club: Pets of Skyrim",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Thonnir",
@@ -2120,7 +2233,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "Thonnir's House, Morthal"
+      "location": "Thonnir's House, Morthal",
+      "gender": "Male"
     },
     {
       "name": "Thorald Gray-Mane",
@@ -2134,7 +2248,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Northwatch Keep"
+      "location": "Northwatch Keep",
+      "gender": "Male"
     },
     {
       "name": "Tolfdir",
@@ -2148,7 +2263,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Essential",
-      "location": "College of Winterhold / Hall of Attainment"
+      "location": "College of Winterhold / Hall of Attainment",
+      "gender": "Male"
     },
     {
       "name": "Torvar",
@@ -2168,6 +2284,7 @@
       "content": "Base",
       "notes": "",
       "location": "Jorrvaskr, Whiterun",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -2190,7 +2307,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Traveling Bard, Traveling Pilgrim, or Visiting Advisor",
@@ -2204,7 +2322,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Ugor",
@@ -2223,7 +2342,8 @@
       "canBlades": true,
       "content": "Base",
       "notes": "",
-      "location": ""
+      "location": "",
+      "gender": "Female"
     },
     {
       "name": "Uthgerd the Unbroken",
@@ -2243,6 +2363,7 @@
       "content": "Base",
       "notes": "",
       "location": "The Bannered Mare, Whiterun",
+      "gender": "Female",
       "marriage": {
         "gender": "Female",
         "race": "Nord",
@@ -2272,6 +2393,7 @@
       "content": "Hearthfire",
       "notes": "",
       "location": "Highmoon Hall, Morthal",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -2294,7 +2416,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Outside of Moss Mother Cavern, Falkreath"
+      "location": "Outside of Moss Mother Cavern, Falkreath",
+      "gender": "Male"
     },
     {
       "name": "Veezara",
@@ -2308,7 +2431,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Dark Brotherhood Sanctuary"
+      "location": "Dark Brotherhood Sanctuary",
+      "gender": "Male"
     },
     {
       "name": "Vesparth the Toe",
@@ -2328,7 +2452,8 @@
       "canBlades": true,
       "content": "Creation Club: Ghosts of the Tribunal",
       "notes": "",
-      "location": "Ashfall's Tear"
+      "location": "Ashfall's Tear",
+      "gender": "Female"
     },
     {
       "name": "Vidrald",
@@ -2342,7 +2467,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "",
-      "location": "Northwatch Keep"
+      "location": "Northwatch Keep",
+      "gender": "Male"
     },
     {
       "name": "Vigilance",
@@ -2356,7 +2482,8 @@
       "canBlades": false,
       "content": "Base",
       "notes": "Can become a pet",
-      "location": ""
+      "location": "",
+      "gender": ""
     },
     {
       "name": "Vilkas",
@@ -2376,6 +2503,7 @@
       "content": "Base",
       "notes": "",
       "location": "Jorrvaskr, Whiterun",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -2404,6 +2532,7 @@
       "content": "Base",
       "notes": "",
       "location": "Silver-Blood Inn, Markarth",
+      "gender": "Male",
       "marriage": {
         "gender": "Male",
         "race": "Nord",
@@ -2432,7 +2561,8 @@
       "canBlades": true,
       "content": "Creation Club: Ghosts of the Tribunal",
       "notes": "",
-      "location": "Ashfall's Tear"
+      "location": "Ashfall's Tear",
+      "gender": "Male"
     }
   ],
   "types": [
@@ -2464,5 +2594,9 @@
     "Dawnguard",
     "Dragonborn",
     "Hearthfire"
+  ],
+  "genders": [
+    "Female",
+    "Male"
   ]
 }

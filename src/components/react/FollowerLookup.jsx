@@ -24,10 +24,11 @@ function SortHeader({ label, field, sort, setSort, align }) {
   );
 }
 
-export default function FollowerLookup({ followers, types, contents }) {
+export default function FollowerLookup({ followers, types, contents, genders = [] }) {
   const [query, setQuery] = useState('');
   const [type, setType] = useState('all');
   const [content, setContent] = useState('all');
+  const [gender, setGender] = useState('all');
   const [flags, setFlags] = useState([]);
   const [sort, setSort] = useState({ field: 'name', dir: 'asc' });
   const [open, setOpen] = useState(null);
@@ -40,6 +41,7 @@ export default function FollowerLookup({ followers, types, contents }) {
     const out = followers.filter((f) => {
       if (type !== 'all' && f.type !== type) return false;
       if (content !== 'all' && f.content !== content) return false;
+      if (gender !== 'all' && f.gender !== gender) return false;
       if (flags.some((k) => !f[k])) return false;
       if (!q) return true;
       return (
@@ -70,12 +72,13 @@ export default function FollowerLookup({ followers, types, contents }) {
       }
       return a.name.localeCompare(b.name) * dir;
     });
-  }, [followers, query, type, content, flags, sort]);
+  }, [followers, query, type, content, gender, flags, sort]);
 
   const reset = () => {
     setQuery('');
     setType('all');
     setContent('all');
+    setGender('all');
     setFlags([]);
   };
 
@@ -106,6 +109,22 @@ export default function FollowerLookup({ followers, types, contents }) {
             <option key={c} value={c}>{c}</option>
           ))}
         </select>
+
+        {genders.length > 1 && (
+          <div className="flw-flags" role="group" aria-label="Filter by gender">
+            {genders.map((g) => (
+              <button
+                key={g}
+                type="button"
+                aria-pressed={gender === g}
+                className={`flw-flag${gender === g ? ' on' : ''}`}
+                onClick={() => setGender(gender === g ? 'all' : g)}
+              >
+                {g}
+              </button>
+            ))}
+          </div>
+        )}
 
         <div className="flw-flags">
           {FLAGS.map((f) => (
@@ -178,6 +197,11 @@ export default function FollowerLookup({ followers, types, contents }) {
                 {open === f.name && (
                   <tr className="flw-detail">
                     <td colSpan={6}>
+                      {(f.gender || f.marriage?.race) && (
+                        <p className="muted">
+                          {[f.gender, f.marriage?.race].filter(Boolean).join(' · ')}
+                        </p>
+                      )}
                       {f.description && <p>{f.description}</p>}
                       {f.recruit && (
                         <p>

@@ -27,6 +27,8 @@ export interface Follower {
   /** Where they live, and so where they return to when dismissed. Blank for the
    *  animals, summons and generic NPCs that have no fixed home. */
   location: string;
+  /** Male | Female, or blank for animals, constructs and generic NPCs. */
+  gender: string;
   /** Present only when they also appear on the Marriage tab */
   marriage?: {
     gender: string;
@@ -43,6 +45,7 @@ export interface FollowerData {
   followers: Follower[];
   types: string[];
   contents: string[];
+  genders: string[];
 }
 
 const yes = (s: string) => /^y(es)?$/i.test(clean(s));
@@ -60,6 +63,7 @@ const F = {
   content: 10,
   notes: 11,
   location: 12,
+  gender: 13,
 };
 
 const M = {
@@ -138,6 +142,7 @@ export async function fetchFollowers(
       content: clean(r[F.content]) || 'Base',
       notes: clean(r[F.notes]),
       location: clean(r[F.location]),
+      gender: clean(r[F.gender]),
       marriage: marriage.get(name.toLowerCase()),
     });
   }
@@ -150,7 +155,8 @@ export async function fetchFollowers(
   followers.sort((a, b) => a.name.localeCompare(b.name));
 
   const types = [...new Set(followers.map((f) => f.type))].sort();
+  const genders = [...new Set(followers.map((f) => f.gender).filter(Boolean))].sort();
   const contents = [...new Set(followers.map((f) => f.content))].sort();
 
-  return { followers, types, contents };
+  return { followers, types, contents, genders };
 }
