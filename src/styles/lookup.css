@@ -478,3 +478,111 @@
 .flw-table .pip {
   margin-bottom: 3px;
 }
+
+/* ── Dungeon index ───────────────────────────────────────────── */
+
+/* Five columns of very uneven natural width: "Where" is a sentence and would
+   otherwise push Marks off the edge, so the widths are declared. */
+.dgn-table {
+  table-layout: fixed;
+  min-width: 880px;
+}
+.dgn-table col.c-name  { width: 24%; }
+.dgn-table col.c-hold  { width: 14%; }
+.dgn-table col.c-type  { width: 15%; }
+.dgn-table col.c-where { width: 31%; }
+.dgn-table col.c-marks { width: 16%; }
+
+.dgn-table th,
+.dgn-table td {
+  padding: 9px 12px;
+}
+.dgn-table tbody th,
+.dgn-table .nowrap {
+  white-space: normal;
+}
+.dgn-table .src {
+  min-width: 0;
+}
+
+/* A cleared location stays readable but recedes — the list is a to-do list. */
+.dgn-row.done th .linkish,
+.dgn-row.done td {
+  opacity: 0.55;
+}
+.dgn-row.done.open th .linkish,
+.dgn-row.done.open td {
+  opacity: 1;
+}
+
+.tick {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 11px;
+  color: var(--accent);
+}
+
+.pip.warn {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.12);
+}
+.pip.off {
+  color: var(--dim);
+  background: var(--row);
+}
+.dgn-table .pip {
+  margin-bottom: 3px;
+}
+
+@media (max-width: 720px) {
+  .dgn .flw-bar > .alc-dlc {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    text-overflow: ellipsis;
+  }
+  .dgn .flw-flags {
+    flex: 1 1 100%;
+  }
+  .dgn .flw-flag {
+    flex: 1;
+    padding: 9px 6px;
+  }
+}
+
+/* "Where" is a full sentence and "Type" adds a third wide column: on a phone the
+   880px table shows two columns and scrolls, and the off-screen wrapping makes
+   row heights ragged. Both already appear in the expanded detail, so drop them
+   and let the table fit the screen instead. */
+@media (max-width: 720px) {
+  .dgn-table {
+    min-width: 0;
+    width: 100%;
+  }
+  .dgn-table .c-drop {
+    display: none;
+  }
+  /* A display:none cell leaves the table structure entirely, so the remaining
+     cells shift onto the first columns of the colgroup and inherit the wrong
+     declared widths. Drop fixed layout here and let the three survivors share
+     the row; the declared widths only make sense when all five are present. */
+  .dgn-table {
+    table-layout: auto;
+  }
+  .dgn-table col.c-name,
+  .dgn-table col.c-hold,
+  .dgn-table col.c-type,
+  .dgn-table col.c-where,
+  .dgn-table col.c-marks {
+    width: auto;
+  }
+  .dgn-table th,
+  .dgn-table td {
+    padding: 9px 8px;
+  }
+  /* Two words on two lines reads as two pips; keep each on one line. */
+  .dgn-table .pip {
+    white-space: nowrap;
+    font-size: 8px;
+    padding: 2px 5px;
+  }
+}

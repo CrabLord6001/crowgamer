@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "snapshot:alchemy": "tsx scripts/snapshot-alchemy.ts 1HwmBbZSUTTtIJuYoItkbwlvWwvoTUdCZZlB7GQkKgc8"
+    "snapshot:alchemy": "tsx scripts/snapshot-alchemy.ts 1HwmBbZSUTTtIJuYoItkbwlvWwvoTUdCZZlB7GQkKgc8",
+    "snapshot:dungeons": "tsx scripts/snapshot-dungeons.ts 1HwmBbZSUTTtIJuYoItkbwlvWwvoTUdCZZlB7GQkKgc8"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",

@@ -61,7 +61,7 @@ tools:
     desc: Every clearable location by hold, with type, enemies and word walls
     icon: "🏔️"
     route: dungeons
-    ready: false
+    ready: true
 tips:
   - A location only counts as cleared when the game marks it cleared, not when it is merely emptied
   - Delver needs 50 cleared locations; 241 of the 298 listed carry a clear marker
