@@ -1,0 +1,96 @@
+---
+import { getEntry } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import DungeonIndex from '../../../components/react/DungeonIndex.jsx';
+import { fetchDungeons } from '../../../lib/dungeons';
+import snapshot from '../../../data/dungeons.json';
+import '../../../styles/lookup.css';
+
+const game = await getEntry('games', 'skyrim');
+const accent = game?.data.accent;
+
+// Which locations exist is fixed game data, so the committed snapshot is the
+// floor. The live read exists so newly cleared locations and note edits reach
+// the site without a commit.
+let data = snapshot;
+if (game?.data.progress?.sheetId) {
+  const live = await fetchDungeons(game.data.progress.sheetId);
+  if (live) data = live;
+}
+
+const { all, counts, cleared, wordWalls } = data.totals;
+const holdCount = data.holds.length;
+---
+
+<Base
+  title="Skyrim dungeon index — every clearable location by hold | CrowGamer"
+  description={`All ${all} Skyrim locations across ${holdCount} holds, with type, enemies, related quests and word walls. ${counts} carry a clear marker that counts toward Dungeons Cleared.`}
+  accent={accent}
+  current="skyrim"
+>
+  <div class="wrap wide">
+    <header class="hero">
+      <a href="/games/skyrim/" class="back">← Skyrim</a>
+      <h1>Dungeon index</h1>
+      <p class="lede">
+        Every location in the run — {all} of them across {holdCount} holds, with type,
+        enemies, related quests and word walls. Filter to what is left, or to the
+        {counts} that actually count toward Dungeons Cleared.
+      </p>
+    </header>
+
+    <DungeonIndex
+      client:load
+      dungeons={data.dungeons}
+      holds={data.holds}
+      types={data.types}
+      contents={data.contents}
+      totals={data.totals}
+    />
+
+    <p class="note">
+      A location only counts when the game itself marks it cleared, which {counts} of the
+      {all} do. The three marked <em>no credit</em> show a cleared marker but never advance
+      the tally, and the rest never mark at all. {wordWalls} hold a word wall, so filtering
+      to those plans a shout route. Cleared states come from my own tracker and move as I
+      play. Covers the base game plus Dawnguard, Hearthfire and Dragonborn; no Creation Club.
+    </p>
+  </div>
+</Base>
+
+<style>
+  .hero {
+    padding: 40px 0 24px;
+  }
+  .wrap.wide {
+    max-width: 1180px;
+  }
+  .back {
+    color: var(--dim);
+    font-size: 11px;
+  }
+  .back:hover {
+    color: var(--accent);
+  }
+  h1 {
+    font-size: clamp(26px, 7vw, 34px);
+    font-weight: 700;
+    margin: 8px 0 8px;
+    color: var(--accent);
+  }
+  .lede {
+    font-size: 13px;
+    color: var(--dim);
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0;
+  }
+  .note {
+    max-width: 700px;
+    margin: 24px 0 48px;
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--dim);
+    opacity: 0.8;
+  }
+</style>

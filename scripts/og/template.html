@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    width: 1200px; height: 630px;
+    background: #08090d;
+    font-family: 'Chakra Petch', system-ui, sans-serif;
+    color: #c9d1d9;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 0 86px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* The accent bar the cards use, stretched across the top. */
+  .edge {
+    position: absolute; top: 0; left: 0; right: 0; height: 6px;
+    background: linear-gradient(90deg, transparent, #f97316, #fbbf24, transparent);
+  }
+  .glow {
+    position: absolute; width: 760px; height: 760px; border-radius: 50%;
+    right: -230px; top: -290px;
+    background: radial-gradient(circle, rgba(249,115,22,0.13), transparent 68%);
+  }
+  .row { display: flex; align-items: center; gap: 26px; }
+  .mark { width: 92px; height: 92px; flex: none; }
+  h1 {
+    font-size: 78px; font-weight: 700; letter-spacing: -0.01em;
+    background: linear-gradient(135deg, #f97316, #fbbf24, #f97316);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p.lede { font-size: 29px; color: #8b93a1; margin-top: 26px; max-width: 790px; line-height: 1.45; }
+  .games { display: flex; gap: 10px; margin-top: 40px; }
+  .chip {
+    font-family: 'JetBrains Mono', monospace; font-size: 17px;
+    border: 1px solid #1a1f2e; border-radius: 7px;
+    padding: 9px 16px; color: #6b7280; background: #0e1117;
+  }
+  .chip.sf { color: #f97316; border-color: rgba(249,115,22,0.35); }
+  .chip.sk { color: #5ba3dd; border-color: rgba(91,163,221,0.35); }
+  .foot {
+    position: absolute; left: 86px; bottom: 44px;
+    font-family: 'JetBrains Mono', monospace; font-size: 18px; color: #6b7280;
+  }
+</style>
+</head>
+<body>
+  <div class="edge"></div>
+  <div class="glow"></div>
+
+  <div class="row">
+    <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#f97316">
+        <path d="M34 62 L12 76 L28 52 Z"/>
+        <path d="M28 60 C26 46 36 34 52 32 C58 24 70 24 74 31 L86 33 L75 39 C77 50 68 60 54 65 C43 69 31 68 28 60 Z"/>
+        <path d="M40 48 C48 44 58 45 64 50 C56 58 45 58 38 54 Z" fill="#08090d" opacity="0.45"/>
+        <path d="M46 65 L45 78 L53 78 L53 75 L49 75 L50 65 Z"/>
+      </g>
+      <circle cx="70" cy="33" r="2.2" fill="#08090d"/>
+    </svg>
+    <h1>CrowGamer</h1>
+  </div>
+
+  <p class="lede">Personal tools and notes for the games I play.</p>
+
+  <div class="games">
+    <span class="chip sf">Satisfactory</span>
+    <span class="chip sk">Skyrim</span>
+  </div>
+
+  <div class="foot">crowgamer.com</div>
+</body>
+</html>
