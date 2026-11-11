@@ -2,10 +2,27 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import GameCard from '../components/GameCard.astro';
+import SiteSearch from '../components/react/SiteSearch.jsx';
+import { fetchProgress } from '../lib/sheet-progress';
+import '../styles/search.css';
 
 const games = (await getCollection('games', ({ data }) => !data.draft)).sort(
   (a, b) => a.data.order - b.data.order
 );
+
+// Live completion for the games that track it. Same read the game page does, so
+// the number on the card and the number on its page can't drift apart.
+const progress = new Map<string, number>();
+for (const g of games) {
+  const p = g.data.progress;
+  if (!p) continue;
+  let overall = p.overall;
+  if (p.sheetId) {
+    const live = await fetchProgress(p.sheetId, p.sheetTab);
+    if (live) overall = live.overall;
+  }
+  progress.set(g.id, overall);
+}
 ---
 
 <Base
@@ -19,8 +36,10 @@ const games = (await getCollection('games', ({ data }) => !data.draft)).sort(
       <p class="by">by Jonathan Crow</p>
     </header>
 
+    <SiteSearch client:idle />
+
     <div class="grid">
-      {games.map((game) => <GameCard game={game} />)}
+      {games.map((game) => <GameCard game={game} overall={progress.get(game.id)} />)}
     </div>
   </div>
 </Base>

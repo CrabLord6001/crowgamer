@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import ToolCard from '../../components/ToolCard.astro';
 import Progress from '../../components/Progress.astro';
 import Cta from '../../components/Cta.astro';
+import Review from '../../components/Review.astro';
 import { fetchProgress } from '../../lib/sheet-progress';
 
 export async function getStaticPaths() {
@@ -67,6 +68,8 @@ const statusLabel = {
     {progress && <Progress progress={progress} />}
 
     {d.cta && <Cta cta={d.cta} />}
+
+    {d.review && <Review review={d.review} />}
 
     {
       tools.length > 0 && (

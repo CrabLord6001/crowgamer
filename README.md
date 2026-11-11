@@ -4,6 +4,29 @@ Game guides, completion notes and tools — [crowgamer.com](https://crowgamer.co
 
 Astro + React islands, deployed on Vercel.
 
+## Writing a review
+
+Add a `review:` block to a game's markdown. Leave it out and the game page
+shows no review section at all — there is no empty state to look at.
+
+```yaml
+review:
+  verdict: One line. The whole opinion, before any of the detail below.
+  score: 8.5            # out of 10; omit to run the review without a number
+  played: 120 hours, PC # what you played before judging; optional
+  good:
+    - Short, one line each
+    - These render with a + mark
+  bad:
+    - And these with a −
+  body: >-
+    Longer prose, as many paragraphs as you want. Plain text, not markdown —
+    blank lines are kept, so paragraphs work.
+  updated: 2026-11-11
+```
+
+Every field except `verdict` is optional, so a review can be a single line.
+
 ## Adding a game
 
 Create one markdown file in `src/content/games/`. No code changes.

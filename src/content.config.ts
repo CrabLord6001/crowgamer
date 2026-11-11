@@ -63,6 +63,26 @@ const games = defineCollection({
         })
         .optional(),
 
+      /**
+       * Your review of the game. Omit it and the game page shows no review
+       * section at all — an empty review block would be worse than none.
+       */
+      review: z
+        .object({
+          /** One line: the whole verdict, before any of the detail below. */
+          verdict: z.string(),
+          /** Out of 10. Omit to run the review without a number. */
+          score: z.number().min(0).max(10).optional(),
+          /** How much you played before judging, e.g. "500+ hours, PC". */
+          played: z.string().optional(),
+          good: z.array(z.string()).default([]),
+          bad: z.array(z.string()).default([]),
+          /** Longer prose. Markdown is not rendered here — keep it plain. */
+          body: z.string().optional(),
+          updated: z.coerce.date().optional(),
+        })
+        .optional(),
+
       /** Snapshot of completion progress. Omit for games you aren't tracking. */
       progress: z
         .object({
