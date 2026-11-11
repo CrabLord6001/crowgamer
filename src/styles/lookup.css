@@ -535,9 +535,13 @@
 }
 
 @media (max-width: 720px) {
+  /* Three selects, one row, a third each. At 50% they wrapped 2 + 1 and left a
+     half-width gap. The 8px bar gap is shared across the two gutters between
+     them, hence the 16/3 per item. */
   .dgn .flw-bar > .alc-dlc {
-    flex: 1 1 calc(50% - 4px);
+    flex: 1 1 calc((100% - 16px) / 3);
     min-width: 0;
+    padding: 8px 8px;
     text-overflow: ellipsis;
   }
   .dgn .flw-flags {
