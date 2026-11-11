@@ -48,17 +48,17 @@ cta:
   href: https://docs.google.com/spreadsheets/d/1xci0z_6NOtNHVyEoAUnL2PNn9M3Wkl5WuJ_nwkMN-So/copy
 tools:
   - name: Alchemy Lookup
-    desc: 109 ingredients and 55 effects — find every ingredient with an effect, or what two ingredients share
+    desc: Potion Effects for Every Ingredient
     icon: "⚗️"
     route: alchemy
     ready: true
   - name: Follower Lookup
-    desc: All 130 followers — where they go when dismissed, prerequisite quest, level cap, skills and marriage status
+    desc: Stats for all 130 Followers
     icon: "🛡️"
     route: followers
     ready: true
   - name: Dungeon Index
-    desc: Every clearable location by hold, with type, enemies and word walls
+    desc: Every Location by Hold
     icon: "🏔️"
     route: dungeons
     ready: true
@@ -66,6 +66,7 @@ tips:
   - A location only counts as cleared when the game marks it cleared, not when it is merely emptied
   - Delver needs 50 cleared locations; 241 of the 298 listed carry a clear marker
   - 40 of the clearable dungeons hold a word wall, so plan shout routes around them
+  - Restore Stamina is carried by 22 of the 109 ingredients, more than any other effect
 ---
 
 A full-completion run through Skyrim Special Edition, tracked hold by hold.
