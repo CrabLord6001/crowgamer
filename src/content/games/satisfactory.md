@@ -27,6 +27,7 @@ tips:
   - Always build on foundations
   - Manifold saves space and reduces spaghetti
   - Somersloop your bottleneck machines
+  - Blueprint anything you build twice
 videos:
   - title: Phase 2 Completion Tour
     desc: >-

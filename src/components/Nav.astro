@@ -9,8 +9,13 @@ const { current = '' } = Astro.props;
 const games = (await getCollection('games', ({ data }) => !data.draft)).sort(
   (a, b) => a.data.order - b.data.order
 );
+
+// The home page carries the brand as its <h1> and every game as a card, so the
+// bar would only repeat both. Interior pages still need it to get back out.
+const home = Astro.url.pathname === '/';
 ---
 
+{!home && (
 <nav>
   <div class="wrap bar">
     <a href="/" class="brand">CrowGamer</a>
@@ -29,6 +34,7 @@ const games = (await getCollection('games', ({ data }) => !data.draft)).sort(
     </div>
   </div>
 </nav>
+)}
 
 <style>
   nav {
