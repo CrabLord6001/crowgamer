@@ -90,7 +90,7 @@ export default function FollowerLookup({ followers, types, contents, genders = [
         <input
           type="search"
           className="alc-search flw-q"
-          placeholder="Search name, location, skill or quest…"
+          placeholder="Search name…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           aria-label="Search followers"

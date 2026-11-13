@@ -162,7 +162,7 @@ export default function AlchemyLookup({ ingredients, effects }) {
           <input
             type="search"
             className="alc-search"
-            placeholder={mode === 'effect' ? 'Search effects…' : 'Search ingredients or effects…'}
+            placeholder={mode === 'effect' ? 'Search effects…' : 'Search ingredients…'}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             aria-label={mode === 'effect' ? 'Search effects' : 'Search ingredients'}

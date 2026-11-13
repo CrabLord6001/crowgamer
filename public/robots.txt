@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# The search index is a JSON blob of every page's text, built to feed the
+# on-site search box. It is not a page, so keep it out of results.
+Disallow: /search-index.json
+
+Sitemap: https://crowgamer.com/sitemap-index.xml

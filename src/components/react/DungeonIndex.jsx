@@ -1,5 +1,7 @@
 import { Fragment, useMemo, useState } from 'react';
 
+import { uespUrl } from '../../lib/uesp';
+
 const MARKER_NOTE = {
   counts: 'Clearing this advances Dungeons Cleared.',
   'no-credit': 'Shows a cleared marker but gives no credit toward Dungeons Cleared.',
@@ -89,7 +91,7 @@ export default function DungeonIndex({ dungeons, holds, types, contents, totals 
         <input
           type="search"
           className="alc-search flw-q"
-          placeholder="Search name, hold, type, enemy or quest…"
+          placeholder="Search name…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           aria-label="Search locations"
@@ -264,6 +266,16 @@ export default function DungeonIndex({ dungeons, holds, types, contents, totals 
                       )}
                       {d.notes && <p>{d.notes}</p>}
                       <p className="muted">{MARKER_NOTE[d.marker]}</p>
+                      <p>
+                        <a
+                          className="dgn-out"
+                          href={uespUrl(d.name, d.content)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          UESP
+                        </a>
+                      </p>
                     </td>
                   </tr>
                 )}

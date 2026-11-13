@@ -73,7 +73,7 @@ export default function TrainerLookup({ trainers, skills, levels, contents }) {
         <input
           type="search"
           className="alc-search flw-q"
-          placeholder="Search trainer, skill or place…"
+          placeholder="Search name…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           aria-label="Search trainers"

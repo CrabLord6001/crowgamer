@@ -61,7 +61,7 @@ export default function ForgeLookup({ recipes, contents }) {
         <input
           type="search"
           className="alc-search flw-q"
-          placeholder="Search a result or an ingredient…"
+          placeholder="Search item…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           aria-label="Search recipes"
