@@ -1,0 +1,630 @@
+{
+  "trainers": [
+    {
+      "skill": "Alchemy",
+      "level": "Common",
+      "name": "Lami",
+      "where": "Morthal",
+      "requirement": "",
+      "services": "Merchant (Apothecary)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Alchemy",
+      "level": "Expert",
+      "name": "Arcadia",
+      "where": "Arcadia's Cauldron in Whiterun",
+      "requirement": "",
+      "services": "Merchant (Apothecary)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Alchemy",
+      "level": "Expert",
+      "name": "Milore Ienth",
+      "where": "Raven Rock",
+      "requirement": "",
+      "services": "Merchant (Apothecary)",
+      "content": "Dragonborn",
+      "isFollower": false
+    },
+    {
+      "skill": "Alchemy",
+      "level": "Master",
+      "name": "Babette",
+      "where": "The Dark Brotherhood Sanctuary or Dawnstar Sanctuary",
+      "requirement": "You must join the Dark Brotherhood to use her services",
+      "services": "Merchant (Apothecary)",
+      "content": "Base",
+      "isFollower": true
+    },
+    {
+      "skill": "Alteration",
+      "level": "Expert",
+      "name": "Dravynea the Stoneweaver",
+      "where": "Kynesgrove",
+      "requirement": "",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Alteration",
+      "level": "Master",
+      "name": "Tolfdir",
+      "where": "College of Winterhold",
+      "requirement": "You must be a member of the College of Winterhold",
+      "services": "Spell Merchant (Alteration)",
+      "content": "Base",
+      "isFollower": true
+    },
+    {
+      "skill": "Archery",
+      "level": "Common",
+      "name": "Faendal",
+      "where": "Riverwood",
+      "requirement": "",
+      "services": "Follower",
+      "content": "Base",
+      "isFollower": true
+    },
+    {
+      "skill": "Archery",
+      "level": "Expert",
+      "name": "Aela the Huntress",
+      "where": "Jorrvaskr in Whiterun",
+      "requirement": "You must be a member of the Companions",
+      "services": "Follower",
+      "content": "Base",
+      "isFollower": true
+    },
+    {
+      "skill": "Archery",
+      "level": "Master",
+      "name": "Niruin",
+      "where": "Thieves Guild",
+      "requirement": "You must be a member of the Thieves Guild",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Archery",
+      "level": "Master",
+      "name": "Sorine Jurard",
+      "where": "Fort Dawnguard",
+      "requirement": "You must be a member of the Dawnguard",
+      "services": "Merchant (General)",
+      "content": "Dawnguard",
+      "isFollower": false
+    },
+    {
+      "skill": "Block",
+      "level": "Expert",
+      "name": "Njada Stonearm",
+      "where": "Jorrvaskr in Whiterun",
+      "requirement": "You must be a member of the Companions",
+      "services": "Follower",
+      "content": "Base",
+      "isFollower": true
+    },
+    {
+      "skill": "Block",
+      "level": "Master",
+      "name": "Chief Larak",
+      "where": "Mor Khazgur",
+      "requirement": "You must be Blood-Kin",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Conjuration",
+      "level": "Common",
+      "name": "Runil",
+      "where": "Falkreath",
+      "requirement": "",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Conjuration",
+      "level": "Expert",
+      "name": "Phinis Gestor",
+      "where": "College of Winterhold",
+      "requirement": "You must be a member of the College of Winterhold",
+      "services": "Spell Merchant (Conjuration)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Conjuration",
+      "level": "Master",
+      "name": "Falion",
+      "where": "Morthal, inside his house",
+      "requirement": "",
+      "services": "Spell Merchant (General)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Conjuration",
+      "level": "Master",
+      "name": "Talvas Fathryon",
+      "where": "Tel Mithryn",
+      "requirement": "",
+      "services": "Spell Merchant (General) / Follower",
+      "content": "Dragonborn",
+      "isFollower": true
+    },
+    {
+      "skill": "Destruction",
+      "level": "Common",
+      "name": "Wuunferth the Unliving",
+      "where": "Windhelm, Palace of the Kings upstairs",
+      "requirement": "",
+      "services": "Spell Merchant (General)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Destruction",
+      "level": "Expert",
+      "name": "Sybille Stentor",
+      "where": "The Blue Palace in Solitude",
+      "requirement": "",
+      "services": "Spell Merchant (General)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Destruction",
+      "level": "Master",
+      "name": "Faralda",
+      "where": "College of Winterhold, usually the Hall of Countenance",
+      "requirement": "You must be a member of the College of Winterhold",
+      "services": "Spell Merchant (Destruction)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Enchanting",
+      "level": "Expert",
+      "name": "Sergius Turrianus",
+      "where": "College of Winterhold, Hall of the Elements or Hall of Countenance",
+      "requirement": "You must be a member of the College of Winterhold",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Enchanting",
+      "level": "Master",
+      "name": "Hamal",
+      "where": "Markarth, usually the Temple of Dibella",
+      "requirement": "You must complete The Heart of Dibella",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Enchanting",
+      "level": "Master",
+      "name": "Neloth",
+      "where": "Tel Mithryn",
+      "requirement": "",
+      "services": "Spell Merchant (General)",
+      "content": "Dragonborn",
+      "isFollower": true
+    },
+    {
+      "skill": "Heavy Armor",
+      "level": "Expert",
+      "name": "Gharol",
+      "where": "Dushnikh Yal",
+      "requirement": "You must be Blood-Kin",
+      "services": "Merchant (Blacksmith)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Heavy Armor",
+      "level": "Master",
+      "name": "Farkas",
+      "where": "Jorrvaskr in Whiterun",
+      "requirement": "You must be a member of the Companions",
+      "services": "Follower",
+      "content": "Base",
+      "isFollower": true
+    },
+    {
+      "skill": "Heavy Armor",
+      "level": "Master",
+      "name": "Isran",
+      "where": "Inside Fort Dawnguard",
+      "requirement": "You must join the Dawnguard to keep training with him",
+      "services": "",
+      "content": "Dawnguard",
+      "isFollower": false
+    },
+    {
+      "skill": "Heavy Armor",
+      "level": "Master",
+      "name": "Kuvar",
+      "where": "Bujold's Retreat or Thirsk Mead Hall",
+      "requirement": "You must complete Retaking Thirsk, and not tell him the truth",
+      "services": "",
+      "content": "Dragonborn",
+      "isFollower": false
+    },
+    {
+      "skill": "Illusion",
+      "level": "Expert",
+      "name": "Atub",
+      "where": "Largashbur",
+      "requirement": "You must complete The Cursed Tribe",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Illusion",
+      "level": "Master",
+      "name": "Drevis Neloren",
+      "where": "College of Winterhold, Hall of Countenance",
+      "requirement": "You must be a member of the College of Winterhold",
+      "services": "Spell Merchant (Illusion)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Light Armor",
+      "level": "Common",
+      "name": "Scouts-Many-Marshes",
+      "where": "The docks outside Windhelm",
+      "requirement": "",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Light Armor",
+      "level": "Expert",
+      "name": "Grelka",
+      "where": "Riften Market 8am to 8pm, Haelga's Bunkhouse at night",
+      "requirement": "",
+      "services": "Merchant (General)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Light Armor",
+      "level": "Master",
+      "name": "Nazir",
+      "where": "The Dark Brotherhood Sanctuary or Dawnstar Sanctuary",
+      "requirement": "You must be a member of the Dark Brotherhood",
+      "services": "",
+      "content": "Base",
+      "isFollower": true
+    },
+    {
+      "skill": "Lockpicking",
+      "level": "Expert",
+      "name": "Ma'jhad",
+      "where": "Ma'dran's Khajiit caravan — Solitude to Windhelm",
+      "requirement": "",
+      "services": "Merchant (Fence)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Lockpicking",
+      "level": "Master",
+      "name": "Vex",
+      "where": "Ragged Flagon",
+      "requirement": "",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "One-handed",
+      "level": "Common",
+      "name": "Amren",
+      "where": "Wanders inner Whiterun by day, near the market at 6pm",
+      "requirement": "",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "One-handed",
+      "level": "Expert",
+      "name": "Athis",
+      "where": "Jorrvaskr in Whiterun",
+      "requirement": "You must be a member of the Companions",
+      "services": "Follower",
+      "content": "Base",
+      "isFollower": true
+    },
+    {
+      "skill": "One-handed",
+      "level": "Master",
+      "name": "Chief Burguk",
+      "where": "Dushnikh Yal",
+      "requirement": "You must be Blood-Kin",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Pickpocket",
+      "level": "Expert",
+      "name": "Silda the Unseen",
+      "where": "Windhelm, outside Candlehearth Hall or the Blacksmith Quarters",
+      "requirement": "",
+      "services": "Beggar (Blessing of Charity)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Pickpocket",
+      "level": "Master",
+      "name": "Vipir the Fleet",
+      "where": "Thieves Guild",
+      "requirement": "You must be a member of the Thieves Guild",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Restoration",
+      "level": "Common",
+      "name": "Aphia Velothi",
+      "where": "Raven Rock",
+      "requirement": "",
+      "services": "",
+      "content": "Dragonborn",
+      "isFollower": false
+    },
+    {
+      "skill": "Restoration",
+      "level": "Expert",
+      "name": "Colette Marence",
+      "where": "College of Winterhold, inside The Arcanaeum",
+      "requirement": "You must be a member of the College of Winterhold",
+      "services": "Spell Merchant (Restoration)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Restoration",
+      "level": "Expert",
+      "name": "Keeper Carcette",
+      "where": "The Hall of the Vigilant, The Pale",
+      "requirement": "MISSABLE. With Dawnguard installed she dies when the Hall is destroyed at level 10",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Restoration",
+      "level": "Master",
+      "name": "Danica Pure-Spring",
+      "where": "Whiterun, Temple of Kynareth",
+      "requirement": "You must complete The Blessings of Nature",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Restoration",
+      "level": "Master",
+      "name": "Florentius Baenius",
+      "where": "Fort Dawnguard",
+      "requirement": "You must be a member of the Dawnguard and complete Bolstering the Ranks",
+      "services": "Merchant (Apothecary)",
+      "content": "Dawnguard",
+      "isFollower": false
+    },
+    {
+      "skill": "Smithing",
+      "level": "Common",
+      "name": "Ghorza gra-Bagol",
+      "where": "Markarth",
+      "requirement": "",
+      "services": "Merchant (Blacksmith)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Smithing",
+      "level": "Expert",
+      "name": "Balimund",
+      "where": "Riften, just outside The Scorched Hammer",
+      "requirement": "",
+      "services": "Merchant (Blacksmith)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Smithing",
+      "level": "Master",
+      "name": "Eorlund Gray-Mane",
+      "where": "Whiterun, at the Skyforge",
+      "requirement": "You must be a member of the Companions",
+      "services": "Merchant (Blacksmith)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Smithing",
+      "level": "Master",
+      "name": "Gunmar",
+      "where": "Fort Dawnguard",
+      "requirement": "You must be a member of the Dawnguard",
+      "services": "Merchant (Blacksmith)",
+      "content": "Dawnguard",
+      "isFollower": false
+    },
+    {
+      "skill": "Sneak",
+      "level": "Common",
+      "name": "Khayla",
+      "where": "Ri'saad's Khajiit caravan — Markarth to Whiterun",
+      "requirement": "",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Sneak",
+      "level": "Expert",
+      "name": "Garvey",
+      "where": "Markarth",
+      "requirement": "",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Sneak",
+      "level": "Master",
+      "name": "Delvin Mallory",
+      "where": "Ragged Flagon",
+      "requirement": "",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Speech",
+      "level": "Common",
+      "name": "Dro'marash",
+      "where": "Ahkari's Khajiit caravan — Dawnstar to Riften",
+      "requirement": "",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Speech",
+      "level": "Common",
+      "name": "Revyn Sadri",
+      "where": "Windhelm, Sadri's Used Wares",
+      "requirement": "Be his friend by helping him during That Was Always There",
+      "services": "Merchant (General)",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Speech",
+      "level": "Expert",
+      "name": "Ogmund the Skald",
+      "where": "Markarth",
+      "requirement": "",
+      "services": "Bard",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Speech",
+      "level": "Expert",
+      "name": "Ronthil",
+      "where": "Volkihar Keep",
+      "requirement": "You must be a member of the Volkihar Family",
+      "services": "Merchant (General)",
+      "content": "Dawnguard",
+      "isFollower": false
+    },
+    {
+      "skill": "Speech",
+      "level": "Master",
+      "name": "Giraud Gemane",
+      "where": "The Bards College in Solitude",
+      "requirement": "",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Two-handed",
+      "level": "Expert",
+      "name": "Torbjorn Shatter-Shield",
+      "where": "Windhelm",
+      "requirement": "",
+      "services": "",
+      "content": "Base",
+      "isFollower": false
+    },
+    {
+      "skill": "Two-handed",
+      "level": "Master",
+      "name": "Fura Bloodmouth",
+      "where": "Volkihar Keep",
+      "requirement": "You must be a member of the Volkihar Family",
+      "services": "",
+      "content": "Dawnguard",
+      "isFollower": false
+    },
+    {
+      "skill": "Two-handed",
+      "level": "Master",
+      "name": "Vilkas",
+      "where": "Jorrvaskr in Whiterun",
+      "requirement": "You must be a member of the Companions",
+      "services": "Follower",
+      "content": "Base",
+      "isFollower": true
+    },
+    {
+      "skill": "Two-handed",
+      "level": "Master",
+      "name": "Wulf Wild-Blood",
+      "where": "Skaal Village",
+      "requirement": "",
+      "services": "",
+      "content": "Dragonborn",
+      "isFollower": false
+    }
+  ],
+  "skills": [
+    "Alchemy",
+    "Alteration",
+    "Archery",
+    "Block",
+    "Conjuration",
+    "Destruction",
+    "Enchanting",
+    "Heavy Armor",
+    "Illusion",
+    "Light Armor",
+    "Lockpicking",
+    "One-handed",
+    "Pickpocket",
+    "Restoration",
+    "Smithing",
+    "Sneak",
+    "Speech",
+    "Two-handed"
+  ],
+  "levels": [
+    "Common",
+    "Expert",
+    "Master"
+  ],
+  "contents": [
+    "Base",
+    "Dawnguard",
+    "Dragonborn"
+  ],
+  "notes": [
+    "Five sessions per character level. Unused ones vanish at level-up — they do not bank.",
+    "Common trains to 50, Expert to 75, Master to 90. No trainer goes past 90 — the last ten points must be earned by use, skill books or quest rewards.",
+    "A trainer who is also a follower can be looted for the fee straight back out of their inventory.",
+    "Full page on UESP"
+  ]
+}

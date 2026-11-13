@@ -1,0 +1,44 @@
+---
+import { getEntry } from 'astro:content';
+import ToolPage from '../../../layouts/ToolPage.astro';
+import TrainerLookup from '../../../components/react/TrainerLookup.jsx';
+import { fetchTrainers } from '../../../lib/trainers';
+import snapshot from '../../../data/trainers.json';
+import followers from '../../../data/followers.json';
+import '../../../styles/lookup.css';
+
+const game = await getEntry('games', 'skyrim');
+
+let data = snapshot;
+if (game?.data.progress?.sheetId) {
+  const live = await fetchTrainers(
+    game.data.progress.sheetId,
+    followers.followers.map((f) => f.name)
+  );
+  if (live) data = live;
+}
+
+const people = new Set(data.trainers.map((t) => t.name)).size;
+const refundable = new Set(
+  data.trainers.filter((t) => t.isFollower).map((t) => t.name)
+).size;
+---
+
+<ToolPage
+  game="skyrim"
+  title="Skyrim trainers — who teaches what, and where | CrowGamer"
+  heading="Trainers"
+  description={`Every Skyrim trainer by skill and tier, where to find them, and what you must join first. ${refundable} of them can also be recruited as followers, which makes the training fee refundable.`}
+  lede={`${people} trainers across ${data.skills.length} skills. Five sessions per character level, and unused ones vanish when you level. Common trains to 50, Expert to 75, Master to 90. ${refundable} are also followers — take the fee back out of their inventory.`} trainers across ${data.skills.length} skills. Common trains to 50, Expert to 75, Master to 90 — no trainer takes you past 90, so the last ten points come from use, skill books or quest rewards.`}
+  wide
+>
+  <TrainerLookup
+    client:load
+    trainers={data.trainers}
+    skills={data.skills}
+    levels={data.levels}
+    contents={data.contents}
+  />
+
+</ToolPage>
+

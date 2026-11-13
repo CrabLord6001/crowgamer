@@ -158,10 +158,16 @@ const statusLabel = {
     margin-bottom: 32px;
   }
 
+  /* Flex rather than grid so an incomplete last row centres: five tools read
+     as three then two, instead of three then two hanging off the left. */
   .tools {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+  }
+  .tools > :global(*) {
+    flex: 0 1 300px;
   }
 
   /* Two columns rather than auto-fit: at the 1000px wrap auto-fit gives three,

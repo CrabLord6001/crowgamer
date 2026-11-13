@@ -91,7 +91,7 @@ export async function fetchProgress(
   const wallsDone = find('Word wall dungeons cleared');
   if (wallsTotal && wallsDone) {
     notes.unshift({
-      label: 'Word walls cleared',
+      label: 'Word walls',
       value: `${clean(wallsDone[1])} / ${clean(wallsTotal[1])}`,
     });
   }

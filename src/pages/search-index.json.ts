@@ -11,6 +11,8 @@ import { getCollection } from 'astro:content';
 import dungeons from '../data/dungeons.json';
 import alchemy from '../data/alchemy.json';
 import followers from '../data/followers.json';
+import forge from '../data/forge.json';
+import trainers from '../data/trainers.json';
 
 interface Row {
   t: string;
@@ -91,6 +93,26 @@ export const GET: APIRoute = async () => {
       k: 'Follower',
       d: [f.type, f.skills?.slice(0, 3).join(', ')].filter(Boolean).join(' · '),
       u: '/games/skyrim/followers/',
+      ...SK,
+    });
+  }
+
+  for (const r of forge.recipes) {
+    rows.push({
+      t: r.output,
+      k: 'Forge recipe',
+      d: r.inputs,
+      u: '/games/skyrim/forge/',
+      ...SK,
+    });
+  }
+
+  for (const t of trainers.trainers) {
+    rows.push({
+      t: t.name,
+      k: 'Trainer',
+      d: [`${t.skill} (${t.level})`, t.where].filter(Boolean).join(' · '),
+      u: '/games/skyrim/trainers/',
       ...SK,
     });
   }

@@ -1,0 +1,31 @@
+---
+import { getEntry } from 'astro:content';
+import ToolPage from '../../../layouts/ToolPage.astro';
+import ForgeLookup from '../../../components/react/ForgeLookup.jsx';
+import { fetchForge } from '../../../lib/forge';
+import snapshot from '../../../data/forge.json';
+import '../../../styles/lookup.css';
+
+const game = await getEntry('games', 'skyrim');
+
+let data = snapshot;
+if (game?.data.progress?.sheetId) {
+  const live = await fetchForge(game.data.progress.sheetId);
+  if (live) data = live;
+}
+
+const count = data.recipes.length;
+---
+
+<ToolPage
+  game="skyrim"
+  title="Skyrim Atronach Forge — what will it actually make? | CrowGamer"
+  heading="Atronach Forge"
+  description={`All ${count} Atronach Forge recipes, and a checker that tells you what the forge will actually produce from a given offering — including when a lower-priority recipe shadows the one you wanted.`}
+  lede="In The Midden, under the College of Winterhold. Put in one recipe's ingredients only — the forge makes the lowest-priority recipe your offering satisfies. Value is the item's worth minus its cheapest ingredients; the Sigil Stone unlocks the Daedric recipes."
+  wide
+>
+  <ForgeLookup client:load recipes={data.recipes} contents={data.contents} />
+
+</ToolPage>
+

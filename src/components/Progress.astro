@@ -126,12 +126,15 @@ const updated = p.updated.toLocaleDateString('en-US', {
     margin-bottom: 32px;
   }
 
+  /* The figure sits left, the notes spread across the rest, so the box is
+     filled rather than clustered at one end. */
   .top {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 28px 40px;
-    padding: 18px 20px;
+    justify-content: space-between;
+    gap: 24px 40px;
+    padding: 22px 26px;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -139,15 +142,18 @@ const updated = p.updated.toLocaleDateString('en-US', {
   }
 
   /* Hero number: the headline is a figure, not a chart. */
+  .hero {
+    text-align: center;
+  }
   .figure {
-    font-size: 44px;
+    font-size: 56px;
     font-weight: 700;
     line-height: 1;
     color: var(--accent);
     font-variant-numeric: tabular-nums;
   }
   .unit {
-    font-size: 22px;
+    font-size: 28px;
     margin-left: 2px;
   }
   .caption {
@@ -161,21 +167,35 @@ const updated = p.updated.toLocaleDateString('en-US', {
   .notes {
     display: flex;
     flex-wrap: wrap;
+    flex: 1 1 420px;
     gap: 20px 32px;
     margin: 0;
   }
-  .notes dt {
-    font-size: 10px;
-    font-family: var(--mono);
-    color: var(--dim);
-    margin-bottom: 4px;
+
+  /* Each note is built like the headline figure — big number, small caption
+     under it — so the row reads as one family. column-reverse because the
+     markup puts the label first, as a definition list should. */
+  .notes > div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 0;
+    min-width: 120px;
   }
   .notes dd {
     margin: 0;
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
     color: var(--text);
     font-variant-numeric: tabular-nums;
+  }
+  .notes dt {
+    margin-top: 6px;
+    font-size: 11px;
+    font-family: var(--mono);
+    color: var(--dim);
   }
 
   .bars {
@@ -271,7 +291,10 @@ const updated = p.updated.toLocaleDateString('en-US', {
 
   @media (max-width: 520px) {
     .figure {
-      font-size: 36px;
+      font-size: 42px;
+    }
+    .notes dd {
+      font-size: 26px;
     }
     .pct {
       display: none;

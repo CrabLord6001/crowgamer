@@ -1,0 +1,1458 @@
+{
+  "recipes": [
+    {
+      "output": "Daedric Helmet",
+      "inputs": "Ebony Helmet + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Helmet"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 1,
+      "valueGain": 169,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric Armor",
+      "inputs": "Ebony Armor + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Armor"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 2,
+      "valueGain": 1019,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric Gauntlets",
+      "inputs": "Ebony Gauntlets + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Gauntlets"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 3,
+      "valueGain": -331,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric Boots",
+      "inputs": "Ebony Boots + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Boots"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 4,
+      "valueGain": -331,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric Shield",
+      "inputs": "Ebony Shield + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Shield"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 5,
+      "valueGain": 169,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric Battleaxe",
+      "inputs": "Ebony Battleaxe + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Battleaxe"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 6,
+      "valueGain": 484,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric War Axe",
+      "inputs": "Ebony War Axe + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony War Axe"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 7,
+      "valueGain": -46,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric Warhammer",
+      "inputs": "Ebony Warhammer + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Warhammer"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 8,
+      "valueGain": 1594,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric Sword",
+      "inputs": "Ebony Sword + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Sword"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 9,
+      "valueGain": -151,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric Greatsword",
+      "inputs": "Ebony Greatsword + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Greatsword"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 10,
+      "valueGain": 379,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric Dagger",
+      "inputs": "Ebony Dagger + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Dagger"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 11,
+      "valueGain": -471,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric Mace",
+      "inputs": "Ebony Mace + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Mace"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 12,
+      "valueGain": 69,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Daedric Bow",
+      "inputs": "Ebony Bow + Daedra Heart + Centurion Dynamo Core + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Ebony Bow"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Centurion Dynamo Core"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 13,
+      "valueGain": 379,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Random Daedric Enchanted Armor",
+      "inputs": "Void Salts + Daedra Heart + Ebony Ingot + Grand Soul Gem (filled) or Black Soul Gem (filled)",
+      "slots": [
+        {
+          "options": [
+            "Void Salts"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Ebony Ingot"
+          ]
+        },
+        {
+          "options": [
+            "Grand Soul Gem",
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 14,
+      "valueGain": null,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Random Daedric Enchanted Weapon",
+      "inputs": "Silver Sword or Silver Greatsword + Daedra Heart + Ebony Ingot + Greater Soul Gem (filled) or Grand Soul Gem (filled) or Black Soul Gem (filled)",
+      "slots": [
+        {
+          "options": [
+            "Silver Sword",
+            "Silver Greatsword"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Ebony Ingot"
+          ]
+        },
+        {
+          "options": [
+            "Greater Soul Gem",
+            "Grand Soul Gem",
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 15,
+      "valueGain": null,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Dremora",
+      "inputs": "Skull + Daedra Heart + Raw Meat (Dog Meat or Mammoth Snout or Horse Meat or Horker Meat or Leg of Goat) + a second Raw Meat (same five, can repeat)",
+      "slots": [
+        {
+          "options": [
+            "Skull"
+          ]
+        },
+        {
+          "options": [
+            "Daedra Heart"
+          ]
+        },
+        {
+          "options": [
+            "Dog Meat",
+            "Mammoth Snout",
+            "Horse Meat",
+            "Horker Meat",
+            "Leg of Goat"
+          ]
+        },
+        {
+          "options": [
+            "Dog Meat",
+            "Mammoth Snout",
+            "Horse Meat",
+            "Horker Meat",
+            "Leg of Goat"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 16,
+      "valueGain": null,
+      "varies": false,
+      "content": "Base",
+      "notes": "Hostile to you. Summoned as a leveled melee fighter."
+    },
+    {
+      "output": "Daedra Heart",
+      "inputs": "Human Heart + Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Human Heart"
+          ]
+        },
+        {
+          "options": [
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": true,
+      "priority": 17,
+      "valueGain": -50,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Staff of the Flame Atronach",
+      "inputs": "Fire Salts + Broom + Corundum Ore or Corundum Ingot + Greater Soul Gem or Grand Soul Gem or Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Fire Salts"
+          ]
+        },
+        {
+          "options": [
+            "Broom"
+          ]
+        },
+        {
+          "options": [
+            "Corundum Ore",
+            "Corundum Ingot"
+          ]
+        },
+        {
+          "options": [
+            "Greater Soul Gem",
+            "Grand Soul Gem",
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 18,
+      "valueGain": 239,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Staff of the Frost Atronach",
+      "inputs": "Frost Salts + Broom + Moonstone Ore or Refined Moonstone + Greater Soul Gem or Grand Soul Gem or Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Frost Salts"
+          ]
+        },
+        {
+          "options": [
+            "Broom"
+          ]
+        },
+        {
+          "options": [
+            "Moonstone Ore",
+            "Refined Moonstone"
+          ]
+        },
+        {
+          "options": [
+            "Greater Soul Gem",
+            "Grand Soul Gem",
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 19,
+      "valueGain": 565,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Staff of the Storm Atronach",
+      "inputs": "Void Salts + Broom + Orichalcum Ore or Orichalcum Ingot + Greater Soul Gem or Grand Soul Gem or Black Soul Gem",
+      "slots": [
+        {
+          "options": [
+            "Void Salts"
+          ]
+        },
+        {
+          "options": [
+            "Broom"
+          ]
+        },
+        {
+          "options": [
+            "Orichalcum Ore",
+            "Orichalcum Ingot"
+          ]
+        },
+        {
+          "options": [
+            "Greater Soul Gem",
+            "Grand Soul Gem",
+            "Black Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 20,
+      "valueGain": 988,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Spell Tome: Conjure Flame Atronach",
+      "inputs": "Fire Salts + Ruined Book + Dragon's Tongue + Bear Pelt",
+      "slots": [
+        {
+          "options": [
+            "Fire Salts"
+          ]
+        },
+        {
+          "options": [
+            "Ruined Book"
+          ]
+        },
+        {
+          "options": [
+            "Dragon's Tongue"
+          ]
+        },
+        {
+          "options": [
+            "Bear Pelt"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 21,
+      "valueGain": -11,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Spell Tome: Conjure Frost Atronach",
+      "inputs": "Frost Salts + Ruined Book + Frost Mirriam + Ice Wolf Pelt",
+      "slots": [
+        {
+          "options": [
+            "Frost Salts"
+          ]
+        },
+        {
+          "options": [
+            "Ruined Book"
+          ]
+        },
+        {
+          "options": [
+            "Frost Mirriam"
+          ]
+        },
+        {
+          "options": [
+            "Ice Wolf Pelt"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 22,
+      "valueGain": 226,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Spell Tome: Conjure Storm Atronach",
+      "inputs": "Void Salts + Ruined Book + Deathbell + Mammoth Tusk",
+      "slots": [
+        {
+          "options": [
+            "Void Salts"
+          ]
+        },
+        {
+          "options": [
+            "Ruined Book"
+          ]
+        },
+        {
+          "options": [
+            "Deathbell"
+          ]
+        },
+        {
+          "options": [
+            "Mammoth Tusk"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 23,
+      "valueGain": 406,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Scroll of Conjure Flame Atronach",
+      "inputs": "Fire Salts + Roll of Paper + Charcoal",
+      "slots": [
+        {
+          "options": [
+            "Fire Salts"
+          ]
+        },
+        {
+          "options": [
+            "Roll of Paper"
+          ]
+        },
+        {
+          "options": [
+            "Charcoal"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 24,
+      "valueGain": -6,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Scroll of Conjure Frost Atronach",
+      "inputs": "Frost Salts + Roll of Paper + Charcoal",
+      "slots": [
+        {
+          "options": [
+            "Frost Salts"
+          ]
+        },
+        {
+          "options": [
+            "Roll of Paper"
+          ]
+        },
+        {
+          "options": [
+            "Charcoal"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 25,
+      "valueGain": -6,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Scroll of Conjure Storm Atronach",
+      "inputs": "Void Salts + Roll of Paper + Charcoal",
+      "slots": [
+        {
+          "options": [
+            "Void Salts"
+          ]
+        },
+        {
+          "options": [
+            "Roll of Paper"
+          ]
+        },
+        {
+          "options": [
+            "Charcoal"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 26,
+      "valueGain": 119,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Flame Atronach",
+      "inputs": "Fire Salts + Ruby or Flawless Ruby or Silver Ruby Ring or Gold Ruby Necklace",
+      "slots": [
+        {
+          "options": [
+            "Fire Salts"
+          ]
+        },
+        {
+          "options": [
+            "Ruby",
+            "Flawless Ruby",
+            "Silver Ruby Ring",
+            "Gold Ruby Necklace"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 27,
+      "valueGain": null,
+      "varies": false,
+      "content": "Base",
+      "notes": "Hostile to you."
+    },
+    {
+      "output": "Frost Atronach",
+      "inputs": "Frost Salts + Sapphire or Flawless Sapphire or Gold Sapphire Ring or Silver Sapphire Necklace",
+      "slots": [
+        {
+          "options": [
+            "Frost Salts"
+          ]
+        },
+        {
+          "options": [
+            "Sapphire",
+            "Flawless Sapphire",
+            "Gold Sapphire Ring",
+            "Silver Sapphire Necklace"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 28,
+      "valueGain": null,
+      "varies": false,
+      "content": "Base",
+      "notes": "Hostile to you."
+    },
+    {
+      "output": "Storm Atronach",
+      "inputs": "Void Salts + Amethyst or Flawless Amethyst or Silver Amethyst Ring",
+      "slots": [
+        {
+          "options": [
+            "Void Salts"
+          ]
+        },
+        {
+          "options": [
+            "Amethyst",
+            "Flawless Amethyst",
+            "Silver Amethyst Ring"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 29,
+      "valueGain": null,
+      "varies": false,
+      "content": "Base",
+      "notes": "Hostile to you."
+    },
+    {
+      "output": "Conjurer's Elixir",
+      "inputs": "Empty Wine Bottle + Ectoplasm + Soul Gem (any size)",
+      "slots": [
+        {
+          "options": [
+            "Empty Wine Bottle"
+          ]
+        },
+        {
+          "options": [
+            "Ectoplasm"
+          ]
+        },
+        {
+          "options": [
+            "Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 30,
+      "valueGain": 248,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Fire Salts",
+      "inputs": "Salt Pile + Ruby or Flawless Ruby or Silver Ruby Ring or Gold Ruby Necklace + Soul Gem (any size)",
+      "slots": [
+        {
+          "options": [
+            "Salt Pile"
+          ]
+        },
+        {
+          "options": [
+            "Ruby",
+            "Flawless Ruby",
+            "Silver Ruby Ring",
+            "Gold Ruby Necklace"
+          ]
+        },
+        {
+          "options": [
+            "Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 31,
+      "valueGain": -162,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Frost Salts",
+      "inputs": "Salt Pile + Sapphire or Flawless Sapphire or Gold Sapphire Ring or Silver Sapphire Necklace + Soul Gem (any size)",
+      "slots": [
+        {
+          "options": [
+            "Salt Pile"
+          ]
+        },
+        {
+          "options": [
+            "Sapphire",
+            "Flawless Sapphire",
+            "Gold Sapphire Ring",
+            "Silver Sapphire Necklace"
+          ]
+        },
+        {
+          "options": [
+            "Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 32,
+      "valueGain": -312,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Void Salts",
+      "inputs": "Salt Pile + Amethyst or Flawless Amethyst or Silver Amethyst Ring + Soul Gem (any size)",
+      "slots": [
+        {
+          "options": [
+            "Salt Pile"
+          ]
+        },
+        {
+          "options": [
+            "Amethyst",
+            "Flawless Amethyst",
+            "Silver Amethyst Ring"
+          ]
+        },
+        {
+          "options": [
+            "Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 33,
+      "valueGain": -7,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Spell Tome: Soul Trap",
+      "inputs": "Salt Pile + Ruined Book + Torchbug Thorax + Soul Gem (any size)",
+      "slots": [
+        {
+          "options": [
+            "Salt Pile"
+          ]
+        },
+        {
+          "options": [
+            "Ruined Book"
+          ]
+        },
+        {
+          "options": [
+            "Torchbug Thorax"
+          ]
+        },
+        {
+          "options": [
+            "Soul Gem"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": 34,
+      "valueGain": 82,
+      "varies": false,
+      "content": "Base",
+      "notes": ""
+    },
+    {
+      "output": "Dark Seducer Archer or Dark Seducer Warrior",
+      "inputs": "Madness Ingot or Madness Ore + Garnet or Flawless Garnet or Silver Garnet Ring",
+      "slots": [
+        {
+          "options": [
+            "Madness Ingot",
+            "Madness Ore"
+          ]
+        },
+        {
+          "options": [
+            "Garnet",
+            "Flawless Garnet",
+            "Silver Garnet Ring"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": null,
+      "valueGain": null,
+      "varies": false,
+      "content": "Creation Club: Saints & Seducers",
+      "notes": "Hostile to you."
+    },
+    {
+      "output": "Dovahcore Helmet",
+      "inputs": "Iron Helmet + Refined Moonstone or Moonstone Ore",
+      "slots": [
+        {
+          "options": [
+            "Iron Helmet"
+          ]
+        },
+        {
+          "options": [
+            "Refined Moonstone",
+            "Moonstone Ore"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": null,
+      "valueGain": null,
+      "varies": false,
+      "content": "Creation Club: Fall of the Space Core",
+      "notes": "Needs the Space Core on the pedestal, not the Sigil Stone."
+    },
+    {
+      "output": "Golden Saint Archer or Golden Saint Warrior",
+      "inputs": "Amber or Refined Amber + Emerald or Flawless Emerald or Silver Emerald Necklace or Gold Emerald Ring",
+      "slots": [
+        {
+          "options": [
+            "Amber",
+            "Refined Amber"
+          ]
+        },
+        {
+          "options": [
+            "Emerald",
+            "Flawless Emerald",
+            "Silver Emerald Necklace",
+            "Gold Emerald Ring"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": null,
+      "valueGain": null,
+      "varies": false,
+      "content": "Creation Club: Saints & Seducers",
+      "notes": "Hostile to you."
+    },
+    {
+      "output": "Scroll of Conjure Dark Seducer Archer or Warrior",
+      "inputs": "Madness Ingot or Madness Ore + Roll of Paper + Charcoal",
+      "slots": [
+        {
+          "options": [
+            "Madness Ingot",
+            "Madness Ore"
+          ]
+        },
+        {
+          "options": [
+            "Roll of Paper"
+          ]
+        },
+        {
+          "options": [
+            "Charcoal"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": null,
+      "valueGain": null,
+      "varies": false,
+      "content": "Creation Club: Saints & Seducers",
+      "notes": ""
+    },
+    {
+      "output": "Scroll of Conjure Golden Saint Archer or Warrior",
+      "inputs": "Amber or Refined Amber + Roll of Paper + Charcoal",
+      "slots": [
+        {
+          "options": [
+            "Amber",
+            "Refined Amber"
+          ]
+        },
+        {
+          "options": [
+            "Roll of Paper"
+          ]
+        },
+        {
+          "options": [
+            "Charcoal"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": null,
+      "valueGain": null,
+      "varies": false,
+      "content": "Creation Club: Saints & Seducers",
+      "notes": ""
+    },
+    {
+      "output": "Scroll of Conjure Staada",
+      "inputs": "Sheogorath-Shaped Amber + Roll of Paper + Charcoal",
+      "slots": [
+        {
+          "options": [
+            "Sheogorath-Shaped Amber"
+          ]
+        },
+        {
+          "options": [
+            "Roll of Paper"
+          ]
+        },
+        {
+          "options": [
+            "Charcoal"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": null,
+      "valueGain": null,
+      "varies": false,
+      "content": "Creation Club: Saints & Seducers",
+      "notes": ""
+    },
+    {
+      "output": "Spell Tome: Conjure Ayleid Lich",
+      "inputs": "Great Welkynd Stone + Ruined Book + Salt Pile",
+      "slots": [
+        {
+          "options": [
+            "Great Welkynd Stone"
+          ]
+        },
+        {
+          "options": [
+            "Ruined Book"
+          ]
+        },
+        {
+          "options": [
+            "Salt Pile"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": null,
+      "valueGain": null,
+      "varies": false,
+      "content": "Creation Club: The Cause",
+      "notes": ""
+    },
+    {
+      "output": "Spell Tome: Conjure Dark Seducer Archer or Warrior",
+      "inputs": "Madness Ingot or Madness Ore + Ruined Book + Screaming Maw + Wolf Pelt",
+      "slots": [
+        {
+          "options": [
+            "Madness Ingot",
+            "Madness Ore"
+          ]
+        },
+        {
+          "options": [
+            "Ruined Book"
+          ]
+        },
+        {
+          "options": [
+            "Screaming Maw"
+          ]
+        },
+        {
+          "options": [
+            "Wolf Pelt"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": null,
+      "valueGain": null,
+      "varies": false,
+      "content": "Creation Club: Saints & Seducers",
+      "notes": ""
+    },
+    {
+      "output": "Spell Tome: Conjure Golden Saint Archer or Warrior",
+      "inputs": "Amber or Refined Amber + Ruined Book + Bliss Bug Thorax + Sabre Cat Pelt",
+      "slots": [
+        {
+          "options": [
+            "Amber",
+            "Refined Amber"
+          ]
+        },
+        {
+          "options": [
+            "Ruined Book"
+          ]
+        },
+        {
+          "options": [
+            "Bliss Bug Thorax"
+          ]
+        },
+        {
+          "options": [
+            "Sabre Cat Pelt"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": null,
+      "valueGain": null,
+      "varies": false,
+      "content": "Creation Club: Saints & Seducers",
+      "notes": ""
+    },
+    {
+      "output": "Spell Tome: Conjure Staada",
+      "inputs": "Sheogorath-Shaped Amber + Ruined Book + Bliss Bug Thorax + Sabre Cat Pelt",
+      "slots": [
+        {
+          "options": [
+            "Sheogorath-Shaped Amber"
+          ]
+        },
+        {
+          "options": [
+            "Ruined Book"
+          ]
+        },
+        {
+          "options": [
+            "Bliss Bug Thorax"
+          ]
+        },
+        {
+          "options": [
+            "Sabre Cat Pelt"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": null,
+      "valueGain": null,
+      "varies": false,
+      "content": "Creation Club: Saints & Seducers",
+      "notes": ""
+    },
+    {
+      "output": "Staada",
+      "inputs": "Sheogorath-Shaped Amber + Emerald or Flawless Emerald or Silver Emerald Necklace or Gold Emerald Ring",
+      "slots": [
+        {
+          "options": [
+            "Sheogorath-Shaped Amber"
+          ]
+        },
+        {
+          "options": [
+            "Emerald",
+            "Flawless Emerald",
+            "Silver Emerald Necklace",
+            "Gold Emerald Ring"
+          ]
+        }
+      ],
+      "needsSigil": false,
+      "priority": null,
+      "valueGain": null,
+      "varies": false,
+      "content": "Creation Club: Saints & Seducers",
+      "notes": "Hostile to you."
+    }
+  ],
+  "contents": [
+    "Base",
+    "Creation Club: Fall of the Space Core",
+    "Creation Club: Saints & Seducers",
+    "Creation Club: The Cause"
+  ],
+  "ingredients": [
+    "Amber",
+    "Amethyst",
+    "Bear Pelt",
+    "Black Soul Gem",
+    "Bliss Bug Thorax",
+    "Broom",
+    "Centurion Dynamo Core",
+    "Charcoal",
+    "Corundum Ingot",
+    "Corundum Ore",
+    "Daedra Heart",
+    "Deathbell",
+    "Dog Meat",
+    "Dragon's Tongue",
+    "Ebony Armor",
+    "Ebony Battleaxe",
+    "Ebony Boots",
+    "Ebony Bow",
+    "Ebony Dagger",
+    "Ebony Gauntlets",
+    "Ebony Greatsword",
+    "Ebony Helmet",
+    "Ebony Ingot",
+    "Ebony Mace",
+    "Ebony Shield",
+    "Ebony Sword",
+    "Ebony War Axe",
+    "Ebony Warhammer",
+    "Ectoplasm",
+    "Emerald",
+    "Empty Wine Bottle",
+    "Fire Salts",
+    "Flawless Amethyst",
+    "Flawless Emerald",
+    "Flawless Garnet",
+    "Flawless Ruby",
+    "Flawless Sapphire",
+    "Frost Mirriam",
+    "Frost Salts",
+    "Garnet",
+    "Gold Emerald Ring",
+    "Gold Ruby Necklace",
+    "Gold Sapphire Ring",
+    "Grand Soul Gem",
+    "Great Welkynd Stone",
+    "Greater Soul Gem",
+    "Horker Meat",
+    "Horse Meat",
+    "Human Heart",
+    "Ice Wolf Pelt",
+    "Iron Helmet",
+    "Leg of Goat",
+    "Madness Ingot",
+    "Madness Ore",
+    "Mammoth Snout",
+    "Mammoth Tusk",
+    "Moonstone Ore",
+    "Orichalcum Ingot",
+    "Orichalcum Ore",
+    "Refined Amber",
+    "Refined Moonstone",
+    "Roll of Paper",
+    "Ruby",
+    "Ruined Book",
+    "Sabre Cat Pelt",
+    "Salt Pile",
+    "Sapphire",
+    "Screaming Maw",
+    "Sheogorath-Shaped Amber",
+    "Silver Amethyst Ring",
+    "Silver Emerald Necklace",
+    "Silver Garnet Ring",
+    "Silver Greatsword",
+    "Silver Ruby Ring",
+    "Silver Sapphire Necklace",
+    "Silver Sword",
+    "Skull",
+    "Soul Gem",
+    "Torchbug Thorax",
+    "Void Salts",
+    "Wolf Pelt"
+  ],
+  "howItWorks": [
+    "In The Midden, under the College of Winterhold. Pull the bar once per item.",
+    "Add one recipe's ingredients only — the forge makes the lowest Priority it can.",
+    "Sigil Stone unlocks the 17 Daedric recipes. From the Conjuration Ritual Spell quest, Conjuration 90.",
+    "Recipe books are optional. Only the ingredients matter.",
+    "Value gain = item's worth minus its cheapest ingredients.",
+    "Full page on UESP"
+  ]
+}

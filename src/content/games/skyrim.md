@@ -36,7 +36,7 @@ progress:
     - { name: Not on the map, done: 0, total: 1 }
   notes:
     - { label: Toward Delver (50), value: "33" }
-    - { label: Word walls cleared, value: "2 / 40" }
+    - { label: Word walls, value: "2 / 40" }
     - { label: Locations remaining, value: "207" }
 cta:
   heading: Track your own run
@@ -61,6 +61,16 @@ tools:
     desc: Every Location by Hold
     icon: "🏔️"
     route: dungeons
+    ready: true
+  - name: Atronach Forge
+    desc: What the Forge Actually Makes
+    icon: "🔥"
+    route: forge
+    ready: true
+  - name: Trainer Lookup
+    desc: Who Teaches What, and Where
+    icon: "📜"
+    route: trainers
     ready: true
 tips:
   - A location only counts as cleared when the game marks it cleared, not when it is merely emptied
